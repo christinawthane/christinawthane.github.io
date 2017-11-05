@@ -2322,3 +2322,13 @@
 				}
 
 	}
+
+
+.en {
+/*    font-family: 'PT Serif', sans-serif;*/
+}
+
+.de {
+/*    font-family: 'PT Sans', sans-serif;*/
+    font-style: italic;
+}
