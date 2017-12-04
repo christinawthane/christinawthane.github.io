@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{{site.title}}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto" rel="stylesheet">
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Header -->
+        <section id="header" class="dark">
+            <header>
+                <img class="image center" src="images/blivenbabywearing_logo.png" width=100/>
+                <h1 style="font-family: cursive">Christine Bliven</h1>
+                <p> <span class="en">Babywearing Consultant</span>
+                    <br/>
+                    <span class="de">Trageberaterin</span></p>
+            </header>
+        </section>
+        {% assign grouped_blurbs = site.homepage | group_by:"key"
+        %}{% for blurbs in grouped_blurbs
+            %}{% assign blurblang = blurbs.items | group_by:"language"
+            %}{% assign en = blurblang | where:"name", "en"
+            %}{% assign de = blurblang | where:"name", "de"
+            %}
+            <!-- {{blurbs.name}} -->
+            {% include homepage_section.html en=en.first.items.first de=de.first.items.first
+        %}{% endfor %}
+
+		<!-- Fourth -->
+			<section id="contact" class="main">
+				<header>
+					<div class="container">
+						<h2>Contact</h2>
+						<p class="en">For questions or to schedule a consultation you can call or text me at: 079 172 7706, e-mail me at <a href="mailto:blivenbabywearing@gmail.com">blivenbabywearing@gmail.com</a> or fill out the form below. I look forward to hearing from you.</p>
+					</div>
+				</header>
+				<div class="content style4 featured">
+					<div class="container 75%">
+						<form method="post" action="https://formspree.io/blivenbabywearing+formspree@gmail.com">
+							<div class="row 50%">
+								<div class="6u 12u(mobile)"><input type="text" placeholder="Name" name="name"/></div>
+								<div class="6u 12u(mobile)"><input type="text" placeholder="Email" name="email"/></div>
+							</div>
+							<div class="row 50%">
+								<div class="12u"><textarea name="message" placeholder="Message"></textarea></div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<ul class="actions">
+										<li><input type="submit" class="button" value="Send Message" /></li>
+										<li><input type="reset" class="button alt" value="Clear Form" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+        <section id="footer">
+<!--
+            <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+-->
+            <div class="copyright">
+                <ul class="menu">
+                    <li>&copy; Christine Bliven. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+
+		<!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
