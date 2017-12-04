@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{{site.title}}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto" rel="stylesheet">
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+        <p>{{site.title}}</p>
+        <div>{%
+        assign grouped_blurbs = site.homepage | group_by:"key"
+        %}{% for blurbs in grouped_blurbs
+            %}{% assign blurblang = blurbs.items | group_by:"language"
+            %}{% assign en = blurblang | where:"name", "en"
+            %}{% assign de = blurblang | where:"name", "de"
+            %}
+            <!-- {{blurbs.name}} -->
+            {% include homepage_section.html en=en.first.items.first de=de.first.items.first
+        %}{% endfor %}
+        </div>
+    </body>
+</html>

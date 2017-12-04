@@ -7,22 +7,28 @@
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# https://jekyllrb.com/docs/configuration/
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: Christine Bliven - Babywearing Consultant
+email: blivenbabywearing@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Christine Bliven is a babywearing consultant in Zurich, Switzerland, serving both English
+  and German communities. Carrying your baby, whether in a sling or a carrier, is emotionally
+  and physically beneficial for both baby and parent.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://www.blivenbabywearing.ch" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: jekyllrb
+#github_username:  jekyll
+timezone: Europe/Zurich
+encoding: utf-8
+collections:
+  - homepage
 
 # Build settings
 markdown: kramdown
