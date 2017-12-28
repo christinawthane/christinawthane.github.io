@@ -18,7 +18,7 @@ Learn the theory behind babywearing, including important information about what 
 
 Learn to carry on your back with a wrap or a carrier, experiment with different lengths or types of wraps, or bring your friend or partner to refresh and go over what you learned.
 
-## Pregnancy Consultation (1.5-2 hours before birth, 1 hour after baby arrives)
+## Pregnancy Consultation (1 hour before birth, 1.5 hours after baby arrives)
 
 *175.-*
 
