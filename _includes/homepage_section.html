@@ -7,14 +7,33 @@
 				</header>
 				<div class="content dark style2">
 					<div class="container">
+                        {% if include.header -%}
+                        {% capture defaultidheader -%}
+                            {{include.header.key}}_header
+                        {%- endcapture -%}
+                        <div class="row">
+                            <section id="{{ include.header.sectionid | default: defaultidheader }}">
+                                <div class="12u 12u(narrow)">
+                                    {{include.header}}
+                                </div>
+                            </section>
+                        </div>
+
+                        {%- endif %}
                         <div class="row">
                             <div class="6u 12u(narrow)">
-                                <section class="en">
+                                {% capture defaultiden -%}
+                                    {{include.en.key}}_en
+                                {%- endcapture -%}
+                                <section id="{{ include.en.sectionid | default: defaultiden }}" class="en">
                                     {{include.en}}
                                 </section>
                             </div>
                             <div class="6u 12u(narrow)">
-                                <section class="de">
+                                {% capture defaultidde -%}
+                                    {{include.de.key}}_de
+                                {%- endcapture -%}
+                                <section id="{{ include.de.sectionid | default: defaultidde }}" class="de">
                                     {{include.de}}
                                 </section>
                             </div>
