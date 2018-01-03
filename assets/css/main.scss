@@ -749,7 +749,7 @@ $hpsection-background : #5c1c72;
 				padding: 0;
 				font-size: 1.25em;
 				line-height: 1.5em;
-				text-align: center;
+				text-align: inherit;
 			}
 		}
 
@@ -757,6 +757,49 @@ $hpsection-background : #5c1c72;
 			padding-top: 1.5em;
 		}
 	}
+
+
+#headeroval {
+    background-size: auto, cover;
+    background-position: top left, center center;
+    background-repeat: repeat, no-repeat;
+    padding: 14em 0 14em 0;
+    text-align: center;
+    background-color: $hpsection-background;    
+    
+    .row div {
+        height: 370px;
+        padding: 0px;
+    }
+    
+    .oval {
+        border-radius:146px/50%;
+        color:black;
+        text-align: center;
+        padding: 1em;
+        height: 370px;
+        background: $logo-lavender;
+        
+        section {            
+            h1 {
+                font-size: 2.25em;
+                font-family: cursive;
+                line-height: 1.25em;
+                margin-bottom: 0;
+                color:inherit;
+            }
+
+            p {
+                margin-top: 1.25em;
+                font-weight: 100;
+                padding: 0;
+                font-size: 1em;
+                line-height: 1.5em;
+                text-align: inherit;
+            }
+        }
+    }
+}
 
 /* Main Sections */
 
@@ -1093,4 +1136,16 @@ $hpsection-background : #5c1c72;
 
 .charge {
     font-style: italic;
+}
+
+
+/* horizontal and vertical centering for a block element within a parent element */
+.centered-outer {
+    position: relative;
+}
+.centered-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
