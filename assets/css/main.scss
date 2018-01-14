@@ -168,7 +168,7 @@ $hpsection-background : #5c1c72;
 
 	blockquote {
 		border-left: solid 0.25em #e6e6e6;
-		padding: 1em 0 1em 2em;
+		padding: 0 0 0 2em;
 		font-style: italic;
 	}
 
@@ -526,7 +526,41 @@ $hpsection-background : #5c1c72;
 				color: rgba(255, 255, 255, 0.85) !important;
 			}
 		}
+        
 	}
+
+    .light {
+        background: $logo-lavender;
+//        color: black;
+        
+        form {
+            border-color: #666;
+            
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            select,
+            .select,
+            textarea {
+                background: none;
+                box-shadow: inset 0 0 0 1px rgba(96, 96, 96, 0.5);
+//                color: #fff;
+//            border-color: #666;
+
+                &:focus {
+                    background: rgba(255, 255, 255, 0.1);
+                    box-shadow: inset 0 0 0 1px #666;
+                }
+            }
+
+            .select {
+                &:before {
+                    background: url('images/dark-arrow.svg') center center no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
 
 /* Table */
 

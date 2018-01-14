@@ -1,5 +1,5 @@
 ---
-language: all
+language: head
 key: benefits
 ---
 <div class="image centered" markdown="1">

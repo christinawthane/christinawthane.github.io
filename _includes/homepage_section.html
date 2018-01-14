@@ -1,11 +1,14 @@
-			<section id="second" class="main">
+{%- capture classes -%}
+{{include.header.extraclasses}} {{include.en.extraclasses}} {{include.de.extraclasses}} {{include.footer.extraclasses}}
+{%- endcapture -%}
+<section id="second" class="main">
 				<header>
 					<div class="container">
 						<h2 class="en">{{include.en.title}}</h2>
 						<h2 class="de">{{include.de.title}}</h2>
 					</div>
 				</header>
-				<div class="content dark style0">
+				<div class="content {{classes | strip | default: "style0" }}">
 					<div class="container">
                         {% if include.header -%}
                         {% capture defaultidheader -%}
@@ -38,6 +41,19 @@
                                 </section>
                             </div>
                         </div>
+                        {% if include.footer -%}
+                        {% capture defaultidfooter -%}
+                            {{include.footer.key}}_footer
+                        {%- endcapture -%}
+                        <div class="row">
+                            <div class="12u 12u(narrow)">
+                                <section id="{{ include.footer.sectionid | default: defaultidfooter }}">
+                                    {{include.footer}}
+                                </section>
+                            </div>
+                        </div>
+
+                        {%- endif %}
 					</div>
 				</div>
 			</section>
