@@ -1,32 +1,43 @@
 ---
+# Top-level layout
+# @param lang language code
 ---
-<!DOCTYPE HTML>
-<!--
-	Tessellate by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
+<!doctype html>
+<html lang="{{layout.lang|default:"en"}}">
+    <head>
         {% include analytics.html -%}
-		<title>{{site.title}}</title>
-		<meta charset="utf-8" />
+        <title>{{site.title}}</title>
+        <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         {% if site.description -%}
         <meta name="description" content="{{site.description}}" />
         {%- endif %}
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto" rel="stylesheet">
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body>
-{% include header.html %}
+
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Emilys+Candy|Trocchi|Allura" rel="stylesheet">
+
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+
+        <link rel="stylesheet" href="/assets/css/main-bootstrap.css" />
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="media">
+                    <img class="mr-3" src="/images/blivenbabywearing_logo_simple.svg"   alt="LilyBee logo" style="height:80px" />
+                    <div class="media-body">
+                        <h1 class="mt-0">LilyBee</h1>
+                        <p class="lead">Babywearing Consultations &amp; Baby Signing Classes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 {{ content }}
 
-{% include footer.html %}
+        <!-- Scripts -->
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/popper.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
     </body>
 </html>

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: babywearing
 ---
 {% assign grouped_blurbs = site.babywearing | group_by:"key"
 %}{% for blurbs in grouped_blurbs

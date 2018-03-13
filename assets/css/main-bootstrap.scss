@@ -1,0 +1,46 @@
+---
+# SASS stylesheet
+---
+
+// Logo colors:
+$logo-purple   : #6c2085;
+$logo-green    : #6ec038;
+$logo-lavender : #e9deff;
+
+$bg-wheat: #fbf3a2;
+$bg-yellow: #ffde2d;
+
+$hpsection-background : #5c1c72;
+
+body {
+    background: $logo-purple;
+}
+
+// Link without blue underline
+.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+// Make a full card hyperlink by adding <a class="card-full-link"> in a class
+.card-full-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.en {}
+.de {font-style: italic;}
+
+.jumbotron {
+    h1 {
+        font-family: 'Emilys Candy', cursive;
+    }
+    
+    font-family: 'Trocchi', serif;
+    //font-family: 'Allura', cursive;
+    
+    background: $bg-yellow;
+}
