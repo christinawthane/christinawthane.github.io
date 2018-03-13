@@ -31,7 +31,7 @@ collections:
   babywearing: {}
   signingtime:
     output: true
-#permalink: /en/:collection/:name
+    permalink: /en/:collection/:name
   
 defaults:
   - scope:

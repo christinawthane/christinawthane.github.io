@@ -51,10 +51,6 @@ body {
     background: $bst-wheat;
 }
 
-:root {
-    --primary: #6ec038;
-}
-
 // Hack; we should be compiling bootstrap from SASS & overriding $brand-primary
 // or else using the customizer
 .btn-primary {
@@ -62,3 +58,4 @@ body {
     background: $bst-blue;
     border-color: $bst-blue;
 }
+
