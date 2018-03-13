@@ -7,8 +7,8 @@ $logo-purple   : #6c2085;
 $logo-green    : #6ec038;
 $logo-lavender : #e9deff;
 
-$bg-wheat: #fbf3a2;
-$bg-yellow: #ffde2d;
+$bg-wheat: #fbf3a2; // signing time background color
+$bg-yellow: #ffde2d; // a strong yellow color
 
 $hpsection-background : #5c1c72;
 
@@ -42,5 +42,5 @@ body {
     font-family: 'Trocchi', serif;
     //font-family: 'Allura', cursive;
     
-    background: $bg-yellow;
+    background: $bg-wheat;
 }
