@@ -7,7 +7,13 @@ $logo-purple   : #6c2085;
 $logo-green    : #6ec038;
 $logo-lavender : #e9deff;
 
-$bg-wheat: #fbf3a2; // signing time background color
+// Signing time colors
+$bst-blue: #159ed6;
+$bst-red: #e11f28;
+$bst-yellow: #f4e764;
+$bst-wheat: #fbf3a2;
+$bst-navy: #00095e;
+
 $bg-yellow: #ffde2d; // a strong yellow color
 
 $hpsection-background : #5c1c72;
@@ -42,5 +48,17 @@ body {
     font-family: 'Trocchi', serif;
     //font-family: 'Allura', cursive;
     
-    background: $bg-wheat;
+    background: $bst-wheat;
+}
+
+:root {
+    --primary: #6ec038;
+}
+
+// Hack; we should be compiling bootstrap from SASS & overriding $brand-primary
+// or else using the customizer
+.btn-primary {
+    color: white;
+    background: $bst-blue;
+    border-color: $bst-blue;
 }

@@ -1,18 +1,19 @@
 ---
 layout: home
 ---
-{% assign grouped_blurbs = site.signingtime | group_by:"key"
-%}{% for blurbs in grouped_blurbs
-    %}{% assign blurblang = blurbs.items | group_by:"language"
-    %}{% assign en = blurblang | where:"name", "en"
-    %}{% assign de = blurblang | where:"name", "de"
-    %}{% assign header = blurblang | where:"name", "head"
-    %}{% assign footer = blurblang | where:"name", "foot"
-    %}
-<!-- {{blurbs.name}} -->
-{% include homepage_section.html
-        en=en.first.items.first
-        de=de.first.items.first
-        header=header.first.items.first
-        footer=footer.first.items.first
-%}{% endfor %}
+<div class="container">
+    <div class="card">
+        <div class="media">
+            <img class="mr-0" src="/images/bst_logo_vector.svg" alt="Baby Signing Time! logo" style="width:50%" />
+            <div class="media-body">
+                {% for pg in site.signingtime -%}
+                <div class="p-3">
+                    <a href="{{pg.url}}">
+                        <button class="btn btn-primary w-100">{{pg.title}}</button>
+                    </a>
+                </div>
+                {%- endfor %}
+            </div>
+        </div>
+    </div>
+</div>
