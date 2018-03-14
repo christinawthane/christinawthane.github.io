@@ -10,7 +10,7 @@ layout: babywearing
     %}{% assign footer = blurblang | where:"name", "foot"
     %}
 <!-- {{blurbs.name}} -->
-{% include homepage_section.html
+{% include babywearing_section.html
         en=en.first.items.first
         de=de.first.items.first
         header=header.first.items.first

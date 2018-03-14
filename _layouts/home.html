@@ -1,9 +1,9 @@
 ---
 # Top-level layout
-# @param lang language code
+# @param language language code
 ---
 <!doctype html>
-<html lang="{{layout.lang|default:"en"}}">
+<html lang="{{layout.language|default:"en"}}">
     <head>
         {% include analytics.html -%}
         <title>{{site.title}}</title>
@@ -36,6 +36,8 @@
         </div>
 
 {{ content }}
+
+{% include footer.html %}
 
         <!-- Scripts -->
         <script src="/assets/js/jquery.min.js"></script>
