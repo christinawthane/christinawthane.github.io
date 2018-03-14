@@ -1,0 +1,61 @@
+---
+# SASS stylesheet
+---
+
+// Logo colors:
+$logo-purple   : #6c2085;
+$logo-green    : #6ec038;
+$logo-lavender : #e9deff;
+
+// Signing time colors
+$bst-blue: #159ed6;
+$bst-red: #e11f28;
+$bst-yellow: #f4e764;
+$bst-wheat: #fbf3a2;
+$bst-navy: #00095e;
+
+$bg-yellow: #ffde2d; // a strong yellow color
+
+$hpsection-background : #5c1c72;
+
+body {
+    background: $logo-purple;
+}
+
+// Link without blue underline
+.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+// Make a full card hyperlink by adding <a class="card-full-link"> in a class
+.card-full-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.en {}
+.de {font-style: italic;}
+
+.jumbotron {
+    h1 {
+        font-family: 'Emilys Candy', cursive;
+    }
+    
+    font-family: 'Trocchi', serif;
+    //font-family: 'Allura', cursive;
+    
+    background: $bst-wheat;
+}
+
+// Hack; we should be compiling bootstrap from SASS & overriding $brand-primary
+// or else using the customizer
+.btn-primary {
+    color: white;
+    background: $bst-blue;
+    border-color: $bst-blue;
+}
+

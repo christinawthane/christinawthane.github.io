@@ -28,7 +28,19 @@ url: "http://www.blivenbabywearing.ch" # the base hostname & protocol for your s
 timezone: Europe/Zurich
 encoding: utf-8
 collections:
-  - homepage
+  babywearing: {}
+  signingtime:
+    output: true
+    permalink: /en/:collection/:title/
+  
+defaults:
+  - scope:
+      path: ""
+      type: signingtime
+    values:
+      layout: signingpage
+      language: en
+  
 
 # Build settings
 markdown: kramdown

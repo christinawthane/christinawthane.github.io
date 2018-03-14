@@ -1,0 +1,18 @@
+---
+layout: home
+permalink: /en/signingtime
+---
+<div class="container">
+    <div class="card">
+        <div class="media">
+            <img class="mr-0" src="/images/bst_logo_vector.svg" alt="Baby Signing Time! logo" style="width:50%" />
+            <div class="media-body p-3">
+                {% for pg in site.signingtime -%}
+                    <a class="m-1" href="{{pg.url}}">
+                        <button class="btn btn-primary btn-lg btn-block">{{pg.title}}</button>
+                    </a>
+                {%- endfor %}
+            </div>
+        </div>
+    </div>
+</div>

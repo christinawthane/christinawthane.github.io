@@ -1,0 +1,63 @@
+{%- capture classes -%}
+{{include.header.extraclasses}} {{include.en.extraclasses}} {{include.de.extraclasses}} {{include.footer.extraclasses}}
+{%- endcapture -%}
+<section id="{{include.name}}">
+    <div class="row text-light text-center">
+        <div class="col mt-5 mb-2">
+            <header>
+                <h2 class="en">{{include.en.title}}</h2>
+                <h2 class="de">{{include.de.title}}</h2>
+            </header>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body container-fluid {{classes | strip }}">
+            {% if include.header -%}
+            
+            {% capture defaultidheader -%}
+                {{include.header.key}}_header
+            {%- endcapture -%}
+            <div class="row">
+                <div class="col text-center">
+                    <section id="{{ include.header.sectionid | default: defaultidheader }}">
+                        {{include.header}}
+                    </section>
+                </div>
+            </div>
+
+            {% endif %}
+
+            <div class="row">
+                <div class="col-md-6">
+                    {% capture defaultiden -%}
+                        {{include.en.key}}_en
+                    {%- endcapture -%}
+                    <section id="{{ include.en.sectionid | default: defaultiden }}" class="en">
+                        {{include.en}}
+                    </section>
+                </div>
+                <div class="col-md-6">
+                    {% capture defaultidde -%}
+                        {{include.de.key}}_de
+                    {%- endcapture -%}
+                    <section id="{{ include.de.sectionid | default: defaultidde }}" class="de">
+                        {{include.de}}
+                    </section>
+                </div>
+            </div>
+            {% if include.footer -%}
+            {% capture defaultidfooter -%}
+                {{include.footer.key}}_footer
+            {%- endcapture -%}
+            <div class="row">
+                <div class="col">
+                    <section id="{{ include.footer.sectionid | default: defaultidfooter }}">
+                        {{include.footer}}
+                    </section>
+                </div>
+            </div>
+
+            {%- endif %}
+        </div>
+    </div>
+</section>

@@ -1,98 +1,47 @@
-<!DOCTYPE HTML>
-<!--
-	Tessellate by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
+---
+# Top-level layout
+# @param language language code
+---
+<!doctype html>
+<html lang="{{layout.language|default:"en"}}">
+    <head>
         {% include analytics.html -%}
-		<title>{{site.title}}</title>
-		<meta charset="utf-8" />
+        <title>{{site.title}}</title>
+        <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         {% if site.description -%}
         <meta name="description" content="{{site.description}}" />
         {%- endif %}
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto" rel="stylesheet">
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body>
-		<!-- Header -->
-        <section id="headeroval" class="dark">
-            <header>
-                <div class="container">
-                    <div class="row">
-                        <div class="4u 12u(narrow) centered-outer" >
-                            <img class="centered-inner" src="images/profile_pic_oval_370.png" />
-                        </div>
-                        <div class="0u 1u(narrow)"></div>
-                        <div class="4u 10u(narrow)">
-                            <div class="ovoid centered-outer" style="background: white;  width:100%;">
-                                <section class="centered-inner">
-                                    <h1>Christine Bliven</h1>
-                                    <p>
-                                        <span class="en">Babywearing Consultant</span>
-                                        <br/>
-                                        <span class="de">Trageberaterin</span>
-                                    </p>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="4u 12u(narrow) centered-outer" >
-                            <div class="centered-inner">
-                            <div class="oval centered-outer" style="width: 293px; height: 370px;">
-                                <section class="centered-inner">
-                                <img src="images/blivenbabywearing_logo.png" style="width:100%" />
-                                </section>
-                            </div>
-                            </div>
+
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Emilys+Candy|Trocchi|Allura" rel="stylesheet">
+
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+
+        <link rel="stylesheet" href="/assets/css/main-bootstrap.css" />
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <a class="link-unstyled" href="/">
+                    <div class="media">
+                        <img class="mr-3" src="/images/blivenbabywearing_logo_simple.svg"   alt="LilyBee logo" style="height:80px" />
+                        <div class="media-body">
+                            <h1 class="mt-0">LilyBee</h1>
+                            <p class="lead">Babywearing Consultations &amp; Baby Signing Classes</p>
                         </div>
                     </div>
-                </div>
-            </header>
-        </section>
-        {% assign grouped_blurbs = site.homepage | group_by:"key"
-        %}{% for blurbs in grouped_blurbs
-            %}{% assign blurblang = blurbs.items | group_by:"language"
-            %}{% assign en = blurblang | where:"name", "en"
-            %}{% assign de = blurblang | where:"name", "de"
-            %}{% assign header = blurblang | where:"name", "head"
-            %}{% assign footer = blurblang | where:"name", "foot"
-            %}
-            <!-- {{blurbs.name}} -->
-            {% include homepage_section.html
-                en=en.first.items.first
-                de=de.first.items.first
-                header=header.first.items.first
-                footer=footer.first.items.first
-        %}{% endfor %}
-
-		<!-- Footer -->
-        <section id="footer">
-<!--
-            <ul class="icons">
-                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-            </ul>
--->
-            <div class="copyright">
-                <ul class="menu">
-                    <li>&copy; Christine Bliven. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                </ul>
+                </a>
             </div>
-        </section>
+        </div>
 
-		<!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/skel.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-        <script src="assets/js/main.js"></script>
+{{ content }}
+
+{% include footer.html %}
+
+        <!-- Scripts -->
+        <script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="/assets/js/popper.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
     </body>
 </html>
