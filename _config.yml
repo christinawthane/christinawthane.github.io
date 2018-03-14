@@ -55,7 +55,7 @@ plugins:
 # We don't use the jekyll-analytics plugin directly, but keep compatable configs
 jekyll_analytics:
   GoogleAnalytics:          # Add, if you want to track with Google Analytics
-    id: UA-112198405-1      # Required - replace with your tracking id
+    id: UA-112198405-2      # Required - replace with your tracking id
     anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
 
 # Exclude from processing.
