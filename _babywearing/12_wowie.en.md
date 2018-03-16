@@ -1,5 +1,5 @@
 ---
-title: How and when to schedule a consultation
+title: Info
 language: en
 key: wowie
 ---

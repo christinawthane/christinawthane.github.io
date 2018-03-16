@@ -1,5 +1,5 @@
 ---
-title: Wo und Wie?
+title: Info
 language: de
 key: wowie
 ---

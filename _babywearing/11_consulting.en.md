@@ -1,5 +1,5 @@
 ---
-title: Consulting Info
+title: Consulting Options
 language: en
 key: consulting
 ---

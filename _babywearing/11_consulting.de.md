@@ -1,5 +1,5 @@
 ---
-title: Beratung Info
+title: Beratungsmöglichkeiten
 language: de
 key: consulting
 ---

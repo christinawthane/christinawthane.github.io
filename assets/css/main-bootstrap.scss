@@ -64,6 +64,17 @@ body {
     background: $bst-blue;
     border-color: $bst-blue;
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background: $bst-yellow;
+    color: black;
+}
+a {
+    color: $bst-blue;
+}
+
+.nav-pills a.nav-link{
+    color: black;
+}
 
 // Remove margin between jumbotron & nav
 .jumbotron + nav {
@@ -73,15 +84,18 @@ body {
 // Nav menu current page
 .current {
     font-weight: bold;
-    text-indent: -1em;
-    padding-left: 1em;
+    display: inline-block;
+    position: relative;
     &::before {
-        content: "˃";
-//        background: red;
-        padding-right:.25em;
-        padding-left:.75em;
-        //position: relative;
-        //left: -1em;
-        //width: 1em;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid #727272; 
+        position: absolute;
+        top: calc(50% - 8px);
+        left: .75rem;
+
     }
 }
