@@ -1,0 +1,71 @@
+---
+layout: home
+permalink: /babywearing/
+scrollspy: navbar
+scrollspy_offset: 56
+---
+{%- assign grouped_blurbs = site.babywearing | group_by:"key" -%}
+<nav id="navbar" class="navbar navbar-light navbar-expand-lg bg-light sticky-top">
+<!--
+    <a class="navbar-brand lilybee" href="{% link index.html %}">LilyBee</a>
+    <ul class="nav nav-pills">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Babywearing</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% link index.html %}">Home</a>
+                <a class="dropdown-item" href="{% link signingtime.html %}">Signing Time!</a>
+            </div>
+        </li>
+    </ul>
+-->
+    <ul class="nav nav-pills">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle navbar-brand lilybee" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">LilyBee</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% link index.html %}">Home</a>
+                <a class="dropdown-item current" href="#">Babywearing</a>
+                <a class="dropdown-item" href="{% link signingtime.html %}">Signing Time!</a>
+            </div>
+        </li>
+    </ul>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarToggle">
+        <ul class="nav nav-pills">
+{% for blurbs in grouped_blurbs -%}
+    {%- assign blurblang = blurbs.items | group_by:"language" -%}
+    {%- assign en = blurblang | where:"name", "en" -%}
+    {%- assign de = blurblang | where:"name", "de" -%}
+    {%- assign header = blurblang | where:"name", "head" -%}
+    {%- assign footer = blurblang | where:"name", "foot" -%}
+    
+<!-- {{blurbs.name}} -->
+{% include babywearing_navitem.html
+        en=en.first.items.first
+        de=de.first.items.first
+        header=header.first.items.first
+        footer=footer.first.items.first
+%}{% endfor %}
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container">
+{% for blurbs in grouped_blurbs -%}
+    {%- assign blurblang = blurbs.items | group_by:"language" -%}
+    {%- assign en = blurblang | where:"name", "en" -%}
+    {%- assign de = blurblang | where:"name", "de" -%}
+    {%- assign header = blurblang | where:"name", "head" -%}
+    {%- assign footer = blurblang | where:"name", "foot" -%}
+    
+<!-- {{blurbs.name}} -->
+{% include babywearing_section.html
+        en=en.first.items.first
+        de=de.first.items.first
+        header=header.first.items.first
+        footer=footer.first.items.first
+%}{% endfor %}
+</div>

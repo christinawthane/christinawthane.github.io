@@ -20,6 +20,7 @@ $hpsection-background : #5c1c72;
 
 body {
     background: $logo-purple;
+    position: relative;
 }
 
 // Link without blue underline
@@ -40,9 +41,14 @@ body {
 .en {}
 .de {font-style: italic;}
 
+
+.lilybee {
+    font-family: 'Emilys Candy', cursive;
+}
+
 .jumbotron {
     h1 {
-        font-family: 'Emilys Candy', cursive;
+        @extend .lilybee;
     }
     
     font-family: 'Trocchi', serif;
@@ -59,3 +65,23 @@ body {
     border-color: $bst-blue;
 }
 
+// Remove margin between jumbotron & nav
+.jumbotron + nav {
+    margin-top: -2rem; //equals jumbotron margin-bottom
+}
+
+// Nav menu current page
+.current {
+    font-weight: bold;
+    text-indent: -1em;
+    padding-left: 1em;
+    &::before {
+        content: "˃";
+//        background: red;
+        padding-right:.25em;
+        padding-left:.75em;
+        //position: relative;
+        //left: -1em;
+        //width: 1em;
+    }
+}

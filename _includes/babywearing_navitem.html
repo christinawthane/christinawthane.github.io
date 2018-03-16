@@ -1,0 +1,7 @@
+{% capture defaultid -%}
+    {{include.en.key| default: include.de.key | default: include.head.key}}
+{%- endcapture -%}
+<li class="nav-item">
+    <a class="nav-link" href="#{{include.name | default: defaultid }}">{{include.en.key}}</a>
+</li>
+

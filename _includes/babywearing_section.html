@@ -1,7 +1,10 @@
 {%- capture classes -%}
 {{include.header.extraclasses}} {{include.en.extraclasses}} {{include.de.extraclasses}} {{include.footer.extraclasses}}
 {%- endcapture -%}
-<section id="{{include.name}}">
+{% capture defaultid -%}
+    {{include.en.key| default: include.de.key | default: include.head.key}}
+{%- endcapture -%}
+<section id="{{include.name | default: defaultid }}">
     <div class="row text-light text-center">
         <div class="col mt-5 mb-2">
             <header>

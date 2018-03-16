@@ -3,7 +3,7 @@ title: Beratung Info
 language: de
 key: consulting
 ---
-![Newborn baby supported by her father's hands]({% link /images/hands.jpg %}){: .image .fit}
+![Newborn baby supported by her father's hands]({% link /images/hands.jpg %}){: .img-fluid}
 
 ## Erste Beratung (1.5-2 Stunden)
 

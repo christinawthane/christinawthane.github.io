@@ -4,7 +4,7 @@ language: en
 key: consulting
 ---
 
-![Man carrying a laughing toddler in a sling]({% link /images/spencer_fall.jpg %}){: .image .fit}
+![Man carrying a laughing toddler in a sling]({% link /images/spencer_fall.jpg %}){: .img-fluid}
 
 ## First-time Consultation (1.5-2 hours)
 

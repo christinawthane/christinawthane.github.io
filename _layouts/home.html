@@ -1,6 +1,8 @@
 ---
 # Top-level layout
 # @param language language code
+# @param scrollspy target for scrollspy. Defaults to none
+# @param scrollspy_offset height to first content block
 ---
 <!doctype html>
 <html lang="{{layout.language|default:"en"}}">
@@ -20,14 +22,16 @@
 
         <link rel="stylesheet" href="/assets/css/main-bootstrap.css" />
     </head>
-    <body>
+    <body {% if page.scrollspy -%}
+          data-spy="scroll" data-target="#{{page.scrollspy}}" data-offset="{{page.scrollspy_offset|default: 0}}"
+          {%- endif %}>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <a class="link-unstyled" href="/">
                     <div class="media">
                         <img class="mr-3" src="/images/blivenbabywearing_logo_simple.svg"   alt="LilyBee logo" style="height:80px" />
                         <div class="media-body">
-                            <h1 class="mt-0">LilyBee</h1>
+                            <h1 class="mt-0 lilybee">LilyBee</h1>
                             <p class="lead">Babywearing Consultations &amp; Baby Signing Classes</p>
                         </div>
                     </div>
