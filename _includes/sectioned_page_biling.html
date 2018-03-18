@@ -1,0 +1,53 @@
+{%- comment -%}
+@param sections List of sections with `language` and `key` properties
+@param business Either 'babywearing' or 'signingtime'
+@param template Liquid partial to render one section. Default: babywearing_section.html
+@param navtemplate Liquid partial to render one nav section. Default: babywearing_navitem.html
+{%- endcomment -%}
+
+{%- assign grouped_blurbs = include.sections | where_exp:"section", "section.published != false" | group_by:"key" -%}
+<nav id="navbar" class="navbar navbar-light navbar-expand-lg bg-light sticky-top">
+    <ul class="nav nav-pills">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle navbar-brand lilybee" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">LilyBee</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% link index.html %}">Home</a>
+                <a class="dropdown-item{% if include.business == "babywearing"%} current{% endif %}" href="#">Babywearing</a>
+                <a class="dropdown-item{% if include.business == "signingtime"%} current{% endif %}" href="{% link signingtime.html %}">Signing Time!</a>
+            </div>
+        </li>
+    </ul>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarToggle">
+        <ul class="nav nav-pills">
+{% for blurbs in grouped_blurbs -%}
+    {%- assign blurblang = blurbs.items | group_by:"language" -%}
+    {%- assign en = blurblang | where:"name", "en" -%}
+    {%- assign de = blurblang | where:"name", "de" -%}
+    {%- assign header = blurblang | where:"name", "head" -%}
+    {%- assign footer = blurblang | where:"name", "foot" -%}
+    
+<!-- {{blurbs.name}} -->
+{% include {{ include.navtemplate | default: "babywearing_navitem.html" }} en=en.first.items.first de=de.first.items.first header=header.first.items.first footer=footer.first.items.first
+%}{% endfor %}
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+{% for blurbs in grouped_blurbs -%}
+    {%- assign blurblang = blurbs.items | group_by:"language" -%}
+    {%- assign en = blurblang | where:"name", "en" -%}
+    {%- assign de = blurblang | where:"name", "de" -%}
+    {%- assign header = blurblang | where:"name", "head" -%}
+    {%- assign footer = blurblang | where:"name", "foot" -%}
+    
+<!-- {{blurbs.name}} -->
+{% include {{include.template | default: "babywearing_section.html" }} foo="bar" en=en.first.items.first de=de.first.items.first header=header.first.items.first footer=footer.first.items.first %}{% endfor %}
+    
+
+</div>
+

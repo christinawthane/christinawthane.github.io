@@ -30,7 +30,7 @@ encoding: utf-8
 collections:
   babywearing: {}
   signingtime:
-    output: true
+    output: false
     permalink: /en/:collection/:title/
   
 defaults:
@@ -38,7 +38,7 @@ defaults:
       path: ""
       type: signingtime
     values:
-      layout: signingpage
+      #layout: signingpage
       language: en
   
 

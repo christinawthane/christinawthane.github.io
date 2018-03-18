@@ -1,0 +1,10 @@
+{%- comment -%}
+@param section section to include. Should have title properties
+@param target ID of an anchor on this page to link to. Defaults to section.slug
+{%- endcomment -%}
+<li class="nav-item">
+    <a class="nav-link" href="#{{include.target | default: include.section.slug }}">
+        <div>{{include.section.title}}</div>
+    </a>
+</li>
+

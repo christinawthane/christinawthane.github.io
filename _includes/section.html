@@ -1,0 +1,20 @@
+{%- comment -%}
+@param section section to include. Should have title properties
+@param target ID for this section. Defaults to section.slug
+{%- endcomment -%}
+<section id="{{include.target | default: include.section.slug }}">
+    <div class="row text-light text-center">
+        <div class="col mt-5 mb-2">
+            <header>
+                <h2>{{include.section.title}}</h2>
+            </header>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body container-fluid">
+            <section>
+                {{include.section}}
+            </section>
+        </div>
+    </div>
+</section>
