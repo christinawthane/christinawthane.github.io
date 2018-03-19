@@ -12,7 +12,7 @@ extraclasses: light
         </div>
         <div class="col-md-6 form-group">
             <label for="emailfield">Email</label>
-            <input id="emailfield" type="text" class="form-control" placeholder="Email" name="email"/>
+            <input id="emailfield" type="email" class="form-control" placeholder="Email" name="_replyto"/>
         </div>
     </div>
     <div class="row">
