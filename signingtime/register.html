@@ -1,7 +1,8 @@
 ---
 title: Registration # Page title and menu item
 slug: registration  # last part of URL
----
+layout: card
+---    
 Spring registration is open now for children 4 years old or younger and their parent(s)/caregivers. Please fill out the form below.
 
 <form method="post" action="https://formspree.io/blivenbabywearing+formspree@gmail.com">
@@ -22,9 +23,10 @@ Spring registration is open now for children 4 years old or younger and their pa
         <div class="form-row form-group">
             <label for="phonefield" class="col-sm-2 col-form-label">Phone number</label>
             <div class="col-sm-10">
+                <input id="phonefield" type="text" class="form-control" placeholder="Phone number" name="phone"/>
+                {% comment %}
                 <div class="row">
                     <div class="col">
-                        <input id="phonefield" type="text" class="form-control" placeholder="Phone number" name="phone"/>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                             <label class="form-check-label" for="defaultCheck1">
@@ -43,6 +45,7 @@ Spring registration is open now for children 4 years old or younger and their pa
                         </div>
                     </div>
                 </div>
+                {% endcomment %}
             </div>
         </div>
         <div class="form-row form-group">
@@ -75,34 +78,34 @@ Spring registration is open now for children 4 years old or younger and their pa
         <h3>Course</h3>
         <div class="form-row">
             <div class="col">
-                <p>All classes occur weekly for 8 weeks. Registration is now open for May-June classes.</p>
+                <p>All classes occur weekly for 8 weeks. Registration is now open for May-June classes. Tuesday classes are held at Gut Betucht Babywearing in Schwamendingen, Zurich. Friday classes are at Hebammenpraxis Zürich in Wipkingen, Zurich.</p>
             </div>
         </div>
         <div class="form-row form-group">
             <label for="classselect" class="col-sm-2 col-form-label">Course Time</label>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="coursetime" id="tu9radio" value="tu9" checked>
+                    <input class="form-check-input" type="radio" name="coursetime" id="tu9radio" value="tu9">
                     <label class="form-check-label" for="tu9radio">
-                    Tuesdays, 9:00-10:00. May 8 - June 26, 2018
+                    Tuesdays, 9:00-10:00. May 8 - June 26, 2018 in Schwamendingen
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="coursetime" id="tu1030radio" value="tu1030">
                     <label class="form-check-label" for="tu1030radio">
-                    Tuesdays, 10:30-11:30. May 8 - June 26, 2018
+                    Tuesdays, 10:30-11:30. May 8 - June 26, 2018 in Schwamendingen
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="coursetime" id="fr1400radio" value="fr1400">
                     <label class="form-check-label" for="fr1400radio">
-                    Fridays, 14:00-15:00. May 4 - June 22, 2018
+                    Fridays, 14:00-15:00. May 4 - June 22, 2018 in Wipkingen
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="coursetime" id="fr1530radio" value="fr1530">
                     <label class="form-check-label" for="fr1530radio">
-                    Fridays, 15:30-16:30. May 4 - June 22, 2018
+                    Fridays, 15:30-16:30. May 4 - June 22, 2018 in Wipkingen
                     </label>
                 </div>
             </div>
@@ -130,13 +133,13 @@ Spring registration is open now for children 4 years old or younger and their pa
             <label for="paymenttypefield" class="col-sm-2 col-form-label">Payment options</label>
             <div class="col-sm-10">
                 <div class="form-check" id="paymenttypefield">
-                    <input class="form-check-input" type="radio" name="payment" id="paymentIBANfield" value="Bank Transfer" checked>
+                    <input class="form-check-input" type="radio" name="payment" id="paymentIBANfield" value="Bank Transfer">
                     <label class="form-check-label" for="paymentIBANfield">
                     Bank Transfer
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="payment" id="paymentCashfield" value="Cash" checked>
+                    <input class="form-check-input" type="radio" name="payment" id="paymentCashfield" value="Cash">
                     <label class="form-check-label" for="paymentCashfield">
                     Cash
                     </label>
@@ -153,7 +156,7 @@ Spring registration is open now for children 4 years old or younger and their pa
         <h3>Additional Comments</h3>
         <div class="form-row">
             <div class="col form-group">
-                <textarea class="form-control" name="additionalcomments" placeholder="Comments, special needs, additional notes, ..." rows="8"></textarea>
+                <textarea class="form-control" name="additionalcomments" placeholder="Comments, special needs, additional notes, ..." rows="2"></textarea>
             </div>
         </div>
         <div class="form-row">
