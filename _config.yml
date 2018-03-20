@@ -15,7 +15,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Christine Bliven - Babywearing Consultant
+title: LilyBee
 email: blivenbabywearing@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Christine Bliven is a babywearing consultant in Zurich, Switzerland, serving both English
