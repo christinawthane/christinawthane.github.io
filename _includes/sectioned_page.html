@@ -6,24 +6,7 @@
 {%- endcomment -%}
 
 <nav id="navbar" class="navbar navbar-light navbar-expand-lg bg-light sticky-top">
-    <ul class="nav nav-pills">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle navbar-brand lilybee" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">LilyBee</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% link index.html %}">Home</a>
-                {% if include.business == "babywearing" -%}
-                    <a class="dropdown-item current" href="#">Babywearing</a>
-                {%- else -%}
-                    <a class="dropdown-item" href="{% link babywearing.html %}">Babywearing</a>
-                {%- endif %}
-                {% if include.business == "signingtime" -%}
-                    <a class="dropdown-item current" href="#">Signing Time!</a>
-                {%- else -%}
-                    <a class="dropdown-item" href="{% link signingtime.html %}">Signing Time!</a>
-                {%- endif %}
-            </div>
-        </li>
-    </ul>
+    {% include nav_maindrop.html slug=include.business language="en" %}
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

@@ -1,0 +1,33 @@
+{%- comment -%}
+Dropdown for global navigation
+
+Elements are pulled from _data/global_nav.html
+
+@param language If specified, filter to a language
+{%- endcomment -%}
+
+<ul class="nav nav-pills">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle navbar-brand lilybee" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">LilyBee</a>
+        <div class="dropdown-menu">            
+            {% for pg in site.data.global_nav %}
+            {% capture text -%}
+                {% if include.language == "en" %}
+                    {{pg.en}}
+                {% elsif include.language == "de" %}
+                    {{pg.de}}
+                {% elsif pg.en == pg.de %}
+                    {{pg.en}}
+                {% else %}
+                    {{pg.en}} | <span class="de">{{pg.de}}</span>
+                {% endif %}
+            {% endcapture %}
+            {% if page.url contains pg.slug -%}
+                <a class="dropdown-item current" href="#">{{text}}</a>
+            {%- else -%}
+                <a class="dropdown-item" href="{{pg.url}}">{{text}}</a>
+            {%- endif %}
+            {% endfor %}
+        </div>
+    </li>
+</ul>

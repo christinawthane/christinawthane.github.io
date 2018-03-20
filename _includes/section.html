@@ -1,12 +1,13 @@
 {%- comment -%}
 @param section section to include. Should have title properties
+@param title Override section title
 @param target ID for this section. Defaults to section.slug
 {%- endcomment -%}
 <section id="{{include.target | default: include.section.slug }}">
     <div class="row text-light text-center">
         <div class="col mt-5 mb-2">
             <header>
-                <h2>{{include.section.title}}</h2>
+                <h2>{{include.title | default: include.section.title}}</h2>
             </header>
         </div>
     </div>

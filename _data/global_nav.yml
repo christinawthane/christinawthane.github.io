@@ -1,0 +1,23 @@
+# Global nav dropdown
+# items are highlighted if the URL contains 'slug'
+- slug: home
+  en: Home
+  de: Home
+  url: /index.html
+- slug: babywearing
+  en: Babywearing
+  de: Trage
+  url: /babywearing
+- slug: signingtime
+  en: Signing Time!
+  de: Signing Time!
+  url: /signingtime
+- slug: about
+  en: About
+  de: Über mich
+  url: /about
+- slug: contact
+  en: Contact
+  de: Kontakt
+  url: /contact
+
