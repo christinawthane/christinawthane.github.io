@@ -4,7 +4,7 @@ key: contact
 extraclasses: light
 ---
 <hr clas="mt-0"/>
-<form method="post" action="https://formspree.io/blivenbabywearing+formspree@gmail.com">
+<form method="post" action="https://formspree.io/formspree@lilybee.ch">
     <div class="row">
         <div class="col-md-6 form-group">
             <label for="namefield">Name</label>
@@ -20,6 +20,7 @@ extraclasses: light
             <textarea class="form-control" name="message" placeholder="Message" rows="8"></textarea>
         </div>
     </div>
+    <input type="hidden" name="formurl" value="{{page.url}}" />
     <div class="row">
         <div class="col">
           <button type="submit" class="btn btn-primary mb-2">Send Message</button>
