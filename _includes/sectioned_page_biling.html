@@ -1,13 +1,12 @@
 {%- comment -%}
 @param sections List of sections with `language` and `key` properties
-@param business Either 'babywearing' or 'signingtime'
 @param template Liquid partial to render one section. Default: babywearing_section.html
 @param navtemplate Liquid partial to render one nav section. Default: babywearing_navitem.html
 {%- endcomment -%}
 
 {%- assign grouped_blurbs = include.sections | where_exp:"section", "section.published != false" | group_by:"key" -%}
 <nav id="navbar" class="navbar navbar-light navbar-expand-lg bg-light sticky-top">
-    {% include nav_maindrop.html slug=include.business %}
+    {% include nav_maindrop.html%}
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

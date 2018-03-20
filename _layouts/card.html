@@ -4,13 +4,12 @@ layout: home
 
 {%- comment -%}
 @param sections List of sections with `language` and `key` properties
-@param business Either 'babywearing' or 'signingtime'
 @param template Liquid partial to render one section. Default: babywearing_section.html
 @param navtemplate Liquid partial to render one nav section. Default: babywearing_navitem.html
 {%- endcomment -%}
 
 <nav id="navbar" class="navbar navbar-light navbar-expand-lg bg-light sticky-top">
-    {% include nav_maindrop.html slug=include.business %}
+    {% include nav_maindrop.html %}
 </nav>
 
 <div class="container">    
