@@ -29,6 +29,7 @@ timezone: Europe/Zurich
 encoding: utf-8
 collections:
   babywearing: {}
+  map: {}
   signingtime:
     output: false
     permalink: /en/:collection/:title/

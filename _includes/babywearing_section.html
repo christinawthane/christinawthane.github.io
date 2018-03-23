@@ -9,7 +9,9 @@
         <div class="col mt-5 mb-2">
             <header>
                 <h2 class="en">{{include.en.title}}</h2>
-                <h2 class="de">{{include.de.title}}</h2>
+                {% if include.en.title != include.de.title -%}
+                    <h2 class="de">{{include.de.title}}</h2>
+                {%- endif %}
             </header>
         </div>
     </div>

@@ -4,7 +4,9 @@
 <li class="nav-item">
     <a class="nav-link" href="#{{include.name | default: defaultid }}">
         <div class="en">{{include.en.title}}</div>
-        <div class="de">{{include.de.title}}</div>
+        {% if include.en.title != include.de.title -%}
+            <div class="de">{{include.de.title}}</div>
+        {%- endif %}
     </a>
 </li>
 

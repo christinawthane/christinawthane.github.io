@@ -16,6 +16,10 @@
   en: About
   de: Über mich
   url: /about
+- slug: map
+  en: Location
+  de: Standort
+  url: /map
 - slug: contact
   en: Contact
   de: Kontakt

@@ -36,7 +36,7 @@
     {%- assign footer = blurblang | where:"name", "foot" -%}
     
 <!-- {{blurbs.name}} -->
-{% include {{include.template | default: "babywearing_section.html" }} foo="bar" en=en.first.items.first de=de.first.items.first header=header.first.items.first footer=footer.first.items.first %}{% endfor %}
+{% include {{include.template | default: "babywearing_section.html" }} en=en.first.items.first de=de.first.items.first header=header.first.items.first footer=footer.first.items.first %}{% endfor %}
     
 
 </div>
