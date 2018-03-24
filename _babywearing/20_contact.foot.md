@@ -1,7 +1,6 @@
 ---
 language: foot
 key: contact
-extraclasses: light
 ---
 <hr clas="mt-0"/>
 <form method="post" action="https://formspree.io/formspree@lilybee.ch">
@@ -20,10 +19,12 @@ extraclasses: light
             <textarea class="form-control" name="message" placeholder="Message" rows="8"></textarea>
         </div>
     </div>
-    <input type="hidden" name="formurl" value="{{page.url}}" />
     <div class="row">
         <div class="col">
           <button type="submit" class="btn btn-primary mb-2">Send Message</button>
         </div>
     </div>
+    <input type="hidden" name="formurl" value="{{page.url}}" />
+    <input type="hidden" name="_next" value="{{baseurl}}/submitted.html" />
+    <input type="hidden" name="_subject" value="Babywearing inquiry" />
 </form>
