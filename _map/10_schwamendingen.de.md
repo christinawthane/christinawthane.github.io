@@ -1,5 +1,5 @@
 ---
-title: Schwamendingen
+title: Gut-Betucht
 language: de
 key: schwamendingen
 ---
