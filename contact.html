@@ -19,6 +19,11 @@ layout: card
     </div>
     <div class="row">
         <div class="col form-group">
+            <input id="subjectfield" type="text" class="form-control" placeholder="Subject" name="_subject" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col form-group">
             <textarea class="form-control" name="message" placeholder="Message" rows="8"></textarea>
         </div>
     </div>
@@ -29,5 +34,4 @@ layout: card
     </div>
     <input type="hidden" name="formurl" value="{{page.url}}" />
     <input type="hidden" name="_next" value="{{baseurl}}/submitted.html" />
-    <input type="hidden" name="_subject" value="Thank you for contacting LilyBee!" />
 </form>
