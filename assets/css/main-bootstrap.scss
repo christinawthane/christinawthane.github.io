@@ -39,7 +39,12 @@ body {
 }
 
 .en {}
-.de {font-style: italic;}
+.de {
+    font-style: italic;
+    em {
+        font-style: normal;
+    }
+}
 
 
 .lilybee {
