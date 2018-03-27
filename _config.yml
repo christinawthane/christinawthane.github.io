@@ -49,6 +49,8 @@ defaults:
 # Build settings
 markdown: kramdown
 github: [metadata]
+#repository: "sbliven.github.io/christinawthane.github.io"
+
 #theme: minima
 plugins:
   - jekyll-feed
