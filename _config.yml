@@ -54,7 +54,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 #  - jekyll-analytics  # not in github-pages
-
+  - jekyll-github-metadata
 
 # We don't use the jekyll-analytics plugin directly, but keep compatable configs
 jekyll_analytics:
