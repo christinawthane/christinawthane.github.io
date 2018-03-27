@@ -5,4 +5,5 @@ slug: template  # last part of URL
 #language: en    # defaults to 'en'
 #permalink: /en/:collection/:title  # full URL
 published: false # DELETE THIS LINE!
+# linking: {{site.baseurl}}{% link images/... %}
 ---

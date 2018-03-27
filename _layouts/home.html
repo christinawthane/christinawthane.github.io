@@ -18,18 +18,18 @@
 
         <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Emilys+Candy|Trocchi|Allura" rel="stylesheet">
 
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/css/bootstrap.min.css"/>
 
-        <link rel="stylesheet" href="/assets/css/main.css" />
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css" />
     </head>
     <body {% if page.scrollspy -%}
           data-spy="scroll" data-target="#{{page.scrollspy}}" data-offset="{{page.scrollspy_offset|default: 0}}"
           {%- endif %}>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <a class="link-unstyled" href="/">
+                <a class="link-unstyled" href="{% if site.baseurl %}{{site.baseurl}}{% else %}/{% endif %}">
                     <div class="media">
-                        <img class="mr-3" src="/images/blivenbabywearing_logo_simple.svg"   alt="LilyBee logo" style="height:80px" />
+                        <img class="mr-3" src="{{site.baseurl}}{% link images/blivenbabywearing_logo_simple.svg %}"   alt="LilyBee logo" style="height:80px" />
                         <div class="media-body">
                             <h1 class="mt-0 lilybee">LilyBee</h1>
                             <p class="lead">Babywearing Consultations &amp; Baby Signing Classes</p>
@@ -44,8 +44,8 @@
 {% include footer.html %}
 
         <!-- Scripts -->
-        <script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
-        <script src="/assets/js/popper.min.js"></script>
-        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="{{site.baseurl}}/assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="{{site.baseurl}}/assets/js/popper.min.js"></script>
+        <script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
     </body>
 </html>

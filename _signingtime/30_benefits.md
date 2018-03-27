@@ -4,7 +4,7 @@ slug: benefits  # last part of URL
 ---
 <div class="row">
     <div class="col-sm-3">
-        <img alt="Closeup of a child and adult holding hands" src="{% link images/pexels-photo-236164_900x600.jpg %}" class="img-fluid" />
+        <img alt="Closeup of a child and adult holding hands" src="{{site.baseurl}}{% link images/pexels-photo-236164_900x600.jpg %}" class="img-fluid" />
     </div>
     <div class="col-sm-9" markdown="1">   
 

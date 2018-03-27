@@ -21,6 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Christine Bliven is a babywearing consultant in Zurich, Switzerland, serving both English
   and German communities. Carrying your baby, whether in a sling or a carrier, is emotionally
   and physically beneficial for both baby and parent.
+#baseurl: "/christinawthane.github.io" # for testing
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.blivenbabywearing.ch" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb

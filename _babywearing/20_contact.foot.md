@@ -25,6 +25,6 @@ key: contact
         </div>
     </div>
     <input type="hidden" name="formurl" value="{{page.url}}" />
-    <input type="hidden" name="_next" value="{{baseurl}}/submitted.html" />
+    <input type="hidden" name="_next" value="{{site.baseurl}}/submitted.html" />
     <input type="hidden" name="_subject" value="Babywearing inquiry" />
 </form>

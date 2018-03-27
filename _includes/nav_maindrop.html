@@ -25,7 +25,7 @@ Elements are pulled from _data/global_nav.html
             {% if page.url contains pg.slug -%}
                 <a class="dropdown-item current" href="#">{{text}}</a>
             {%- else -%}
-                <a class="dropdown-item" href="{{pg.url}}">{{text}}</a>
+                <a class="dropdown-item" href="{{site.baseurl}}{{pg.url}}">{{text}}</a>
             {%- endif %}
             {% endfor %}
         </div>
