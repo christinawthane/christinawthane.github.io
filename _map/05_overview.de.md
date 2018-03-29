@@ -5,7 +5,7 @@ key: overview
 ---
 
 Trageberatungen finden im [Schwamendingen](#schwamendingen) im [Gut-Betucht](http://www.gut-betucht.ch/) Shop statt.
-Hausbesuche sind nach Vereinbarung gegen eine zusätzliche Gebühr möglich.
+Beratungen bei dir zuhause sind möglich nach Vereinbarung und mit zusätzlichem Aufschlag je nach Distanz.
 
 {: .text-center}
 <a href="{{site.baseurl}}{% link babywearing/index.html %}" role="button" class="btn btn-primary">Beratungen Info</a>

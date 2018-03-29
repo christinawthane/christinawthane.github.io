@@ -4,7 +4,7 @@ language: en
 key: overview
 ---
 
-Babywearing consultations are held in [Schwamendingen](#schwamendingen) at the [Gut-Betucht](http://www.gut-betucht.ch/) babywearing shop. Home visits are also available by special arrangement for an additional fee.
+Babywearing consultations are held in [Schwamendingen](#schwamendingen) at the [Gut-Betucht](http://www.gut-betucht.ch/) babywearing shop. Home visits are also available by special arrangement for an additional fee by distance.
 
 {: .text-center}
 <a href="{{site.baseurl}}{% link babywearing/index.html %}" role="button" class="btn btn-primary">Babywearing Info</a>
