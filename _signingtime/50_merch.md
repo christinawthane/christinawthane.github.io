@@ -11,7 +11,7 @@ slug: products  # last part of URL
     </div>
     <div class="col-lg-8 col-md-6" markdown="1">
 
-Practice signing and singing throughout the week! Signing Time classes come with a complementary DVD and download code for Baby Signing Time Episode 1. Sign along with Rachel Coleman and her adorable class graduates to learn basic signs for everyday life.
+Practice signing and singing throughout the week! Signing Time classes come with two complementary DVDs and download code for Baby Signing Time Episode 1. Sign along with Rachel Coleman and her adorable baby class to learn basic signs for everyday life.
 
 Additional products are available either in class or in the online shop below. Products include videos (DVD or download), songs, books, flashcards, and more!
 

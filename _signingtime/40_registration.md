@@ -22,7 +22,7 @@ Classes run weekly for 8 weeks. The following classes are currently offered:
 <a href="{{site.baseurl}}{% link signingtime/register.html %}" class="btn btn-primary mr-2" role="button">Register</a>
 <a href="{{site.baseurl}}{% link contact.html %}" role="button" class="btn btn-primary">Request more information</a>
 
-Registration includes a free DVD and download code of Baby Signing Time Episode 1 with Rachel Coleman!
+Registration includes two DVDs and a download code for Baby Signing Time Episode 1 with Rachel Coleman!
 
 </div>
 <div class="col-lg-4 col-md-6">
