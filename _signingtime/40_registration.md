@@ -22,12 +22,14 @@ Classes run weekly for 8 weeks. The following classes are currently offered:
 <a href="{{site.baseurl}}{% link signingtime/register.html %}" class="btn btn-primary mr-2" role="button">Register</a>
 <a href="{{site.baseurl}}{% link contact.html %}" role="button" class="btn btn-primary">Request more information</a>
 
+Registration includes a free DVD and download code of Baby Signing Time Episode 1 with Rachel Coleman!
+
 </div>
-    <div class="col-lg-4 col-md-6">
-        <!-- 
-        Karl Fredrickson (https://unsplash.com/photos/GEJxI_QRPwM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-        Unsplash (https://unsplash.com/collections/204878/hannahrayna-agaist-the-world?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-        -->
-        <img alt="Girl waving at pink cherry blossoms. Photo by Karl Fredrickson on Unsplash" src="{{site.baseurl}}{% link images/karl-fredrickson-74973-unsplash_600x900.jpg %}" class="img-fluid" />
-    </div>
+<div class="col-lg-4 col-md-6">
+    <!-- 
+    Karl Fredrickson (https://unsplash.com/photos/GEJxI_QRPwM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    Unsplash (https://unsplash.com/collections/204878/hannahrayna-agaist-the-world?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    -->
+    <img alt="Girl waving at pink cherry blossoms. Photo by Karl Fredrickson on Unsplash" src="{{site.baseurl}}{% link images/karl-fredrickson-74973-unsplash_600x900.jpg %}" class="img-fluid" />
+</div>
 </div>
