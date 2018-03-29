@@ -5,7 +5,7 @@
 # @param scrollspy_offset height to first content block
 ---
 <!doctype html>
-<html lang="{{layout.language|default:"en"}}">
+<html {%- if page.language and page.language != blank %} lang="{{page.language}}"{% endif %}>
     <head>
         {% include analytics.html -%}
         <title>{{site.title}}{% if page.title != nil and page.title != "" %} - {{page.title}}{% endif %}</title>
