@@ -8,11 +8,11 @@
 <html lang="{{layout.language|default:"en"}}">
     <head>
         {% include analytics.html -%}
-        <title>{{site.title}}{% if page.title %} - {{page.title}}{% endif %}</title>
+        <title>{{site.title}}{% if page.title != nil and page.title != "" %} - {{page.title}}{% endif %}</title>
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        {% if site.description -%}
+        {% if site.description != nil and site.description != "" -%}
         <meta name="description" content="{{site.description}}" />
         {%- endif %}
 
@@ -22,12 +22,12 @@
 
         <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css" />
     </head>
-    <body {% if page.scrollspy -%}
+    <body {% if page.scrollspy != nil and page.scrollspy != "" -%}
           data-spy="scroll" data-target="#{{page.scrollspy}}" data-offset="{{page.scrollspy_offset|default: 0}}"
           {%- endif %}>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <a class="link-unstyled" href="{% if site.baseurl %}{{site.baseurl}}{% else %}/{% endif %}">
+                <a class="link-unstyled" href="{% if site.baseurl != nil and site.baseurl != ""%}{{site.baseurl}}{% else %}/{% endif %}">
                     <div class="media">
                         <img class="mr-3" src="{{site.baseurl}}{% link images/blivenbabywearing_logo_simple.svg %}"   alt="LilyBee logo" style="height:80px" />
                         <div class="media-body">
