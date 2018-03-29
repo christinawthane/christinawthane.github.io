@@ -3,8 +3,10 @@ title: About Signing Time! # Page title and menu item
 slug: about  # last part of URL
 ---
 
-<img class="card-img-top mx-auto m-3" src="{{site.baseurl}}{% link images/bst_logo_vector.svg %}" alt="Baby Signing Time! logo" style="height:100px" />
-
+<div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3">
+<!--<img class="card-img-top mx-auto m-3" src="{{site.baseurl}}{% link images/bst_logo_vector.svg %}" alt="Baby Signing Time! logo" style="height:150px" />-->
+<img class="img-fluid my-3" src="{{site.baseurl}}{% link images/bst_logo_vector.svg %}" alt="Baby Signing Time! logo" />
+</div>
 
 Signing Time was developed by Rachel Coleman in 2006. She found out that her own young daughter Leah was deaf and not only learned American Sign Language (ASL) herself, but taught Leah’s classmates and family so they could communicate with her. That turned into videos and songs to help children and their parents learn to communicate.
 
