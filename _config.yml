@@ -36,6 +36,8 @@ collections:
   signingtime:
     output: false
     #permalink: /en/:collection/:title/
+  contact:
+    output: false
   
 defaults:
   - scope:
