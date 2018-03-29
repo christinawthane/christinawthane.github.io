@@ -11,7 +11,7 @@ Beratungen finden im [Gut-Betucht](http://www.gut-betucht.ch/) Shop in Schwamend
 > Dübendorfstrasse 217<br/>
 > 8051 Zürich
 
-*Achtung: Gut Betucht hat sich in März 2018 umgezogt! Wenn Sie früher die Winterthurerstrasse Standort besuchen haben, bitte die neue Adresse beobachten.*
+*Achtung: Gut Betucht ist im März 2018 umgezogen! Bitte beachten sie die neue Adresse. *
 
 **Richtungsangaben**: Das Geschäft finden Sie direkt an der Tramhaltestelle Probstei. Beim Kursraum gibt es 3 Kundenparkplätze. Es gibt an der nahegelegenen Probsteistrasse noch blaue Zone Parkplätze. Beratungen sind normallerweise im Kursraum.
 
