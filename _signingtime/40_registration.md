@@ -9,7 +9,7 @@ Spring registration is open now for children 4 years old or younger and their pa
 #### Schedule
 The spring course will run 4 weeks:
 
-- Fridays, 14:00-15:00. May 18 - June 8, 2018 in [Wipkingen]({{site.baseurl}}{% link map.md %}#wipkingen)
+- Fridays, 14:00-14:45. May 18 - June 8, 2018 in [Wipkingen]({{site.baseurl}}{% link map.md %}#wipkingen)
 
 Additional classes will be offered in Fall in both Wipkingen and [Schwamendingen]({{site.baseurl}}{% link map.md %}#schwamendingen) locations.
 
