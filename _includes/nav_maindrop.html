@@ -22,11 +22,16 @@ Elements are pulled from _data/global_nav.html
                     {{pg.en}} | <span class="de">{{pg.de}}</span>
                 {% endif %}
             {% endcapture %}
-            {% if page.url contains pg.slug -%}
-                <a class="dropdown-item current" href="#">{{text}}</a>
-            {%- else -%}
-                <a class="dropdown-item" href="{{site.baseurl}}{{pg.url}}">{{text}}</a>
-            {%- endif %}
+            <a class="dropdown-item
+                {%- if page.url contains pg.slug %} current{%- endif -%}
+            " href="
+                {%- capture urlslash -%}{{pg.url}}/{%-endcapture -%}
+                {%- if page.url == pg.url or page.url == urlslash -%}
+                    #
+                {%- else -%}
+                    {{site.baseurl}}{{pg.url}}
+                {%- endif -%}
+            ">{{text}}</a>
             {% endfor %}
         </div>
     </li>
