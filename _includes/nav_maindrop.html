@@ -29,6 +29,8 @@ Elements are pulled from _data/global_nav.html
             " href="
                 {%- if page.url == pg.url -%}
                     #
+                    <!-- page.url = {{page.url}}
+                    pg.url = {{pg.url}} -->
                 {%- else -%}
                     {{site.baseurl}}{{pg.url}}
                 {%- endif -%}
