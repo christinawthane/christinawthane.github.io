@@ -40,10 +40,26 @@ redirect-from: big60
         <b>Stricken</b> ist richtig! <a href="stricken.html">Preis</a>
     </div>
 </div>
+<div style="border:1px solid black;text-align: left" class="row">
+    <div class="col">
+        <pre  id="log" ></pre>
+    </div>
+
+</div>
 
 <script src="big60.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function(evt) {
+    // hook log
+    var oldlog = console.log;
+console.log = (function(oldlog) {
+    $log = $("#log")
+    return function(msg) {
+        $log.text($log.text()+"\n" + msg);
+        return oldlog(msg);
+    }
+})(oldlog);
+    
     $("#guessform").submit(checkGuess);
     update();
 });

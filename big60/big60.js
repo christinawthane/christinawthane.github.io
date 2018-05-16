@@ -48,8 +48,16 @@ function notanagram(word1, word2) {
     let counts1 = Array.from(word1.length < word2.length ? word1 : word2).reduce(count,{});
     let counts2 = Array.from(word1.length < word2.length ? word2 : word1).reduce(count,{});
     
+    
+    console.log("counts1:"+JSON.stringify(counts1));
+    console.log("counts2:"+JSON.stringify(counts2));
     for(letter in counts1) {
-        if(!(letter in counts2) || counts1[letter] > counts2[letter]) {
+        if((!(letter in counts2)) || counts1[letter] > counts2[letter]) {
+            if(!(letter in counts2)){
+                console.log("'"+letter+"' not in counts2");
+            } else {
+                console.log(counts1[letter] +" > "+ counts2[letter])
+            }
             return letter;
         }
     }
