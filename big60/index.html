@@ -1,0 +1,48 @@
+---
+layout: big60
+---
+<form id="guessform" >
+    <div class="row mb-4">
+        <div class="col">
+            <label for="guess">Passwort:</label><br/>
+            <input class="form-control" id="guess" name="guess" type="text" style="width:300px;display:inline-block"/>
+            <button class="btn btn-dark" type="submit">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</form>
+
+
+<div id="wrong" class="row wrong">
+    <div class="col">
+        <i class="fas fa-times-circle" style="color:red"></i>
+        <span id="wrongtext">Gar falsch!</span>
+    </div>
+</div>
+<div id="correct1" class="row correct">
+    <div class="col">
+        <i class="fas fa-check-circle" style="color:green"></i>
+        <b>Kreieren</b> ist richtig! <a href="kreieren.html">Preis</a>
+    </div>
+</div>
+<div id="correct2" class="row correct">
+    <div class="col">
+        <i class="fas fa-check-circle" style="color:green"></i>
+        <b>Wandern</b> ist richtig! <a href="wandern.html">Preis</a>
+    </div>
+</div>
+<div id="correct3" class="row correct">
+    <div class="col">
+        <i class="fas fa-check-circle" style="color:green"></i>
+        <b>Stricken</b> ist richtig! <a href="stricken.html">Preis</a>
+    </div>
+</div>
+
+<script src="big60.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(evt) {
+    $("#guessform").submit(checkGuess);
+    update();
+});
+</script>
