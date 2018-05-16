@@ -19,12 +19,21 @@ let incorrect = [
     {   guess: /christine/i,
         response: "schön, aber nicht die Antwort."
     },
-    {   guess: /ursula/i,
+    {   guess: /ursula|birthday|geburtstag/i,
         response: "falsch. Aber frohe Geburtstag!"
     },  
     {   guess: /gotti/i,
         response: "falsch. Aber wir lieben dich!"
-    },  
+    },
+    {   guess: /passwor|god|123/i,
+        response: "falsch. Das wird zu einfach sein."
+    },
+    {   guess: /[0-9]/i,
+        response: "die neue 40!"
+    },
+    {   guess: /hilf|help|weissx/i,
+        response: "falsch. Keine Gnade!"
+    },
 ];
 
 // Check if word1 can not be constructed from the letters of word2
