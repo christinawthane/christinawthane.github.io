@@ -81,12 +81,13 @@ function update(guesses) {
             guesses = [];
         }
     }
+    guesses = guesses.map((x) => x.toLowerCase());
 
     let showwrong = false;
     
     // Show response
     guesses.forEach( guess => {
-        let right = correct.filter(x => x.guess == guess.toLowerCase());
+        let right = correct.filter(x => x.guess == guess);
     
         if(right.length > 0) {
             //console.log("Right: "+right[0].div);
@@ -126,6 +127,7 @@ function checkGuess(evt) {
     }
     
     let guess = $("#guess").val();
+    guess = guess.toLowerCase();
     console.log("checkGuess: "+guess);
     
     
@@ -134,16 +136,17 @@ function checkGuess(evt) {
     let query = loc.search(true);
     let guesses;
     if(Array.isArray(query.guess)) {
-        let correctguesses = correct.map((x) => x.guess);
-        guesses = new Set(query.guess.filter((guess) => correctguesses.includes(guess.toLowerCase())));
+        guesses = query.guess;
     } else if(typeof(query.guess) === "string") {
-        guesses = new Set([query.guess]);
+        guesses = [query.guess];
     } else {
-        guesses = new Set();
+        guesses = [];
     }
-    guesses
-    guesses.add(guess);
-    query.guess = Array.from(guesses);
+    guesses = guesses.map((x)=>x.toLowerCase());
+    let correctguesses = correct.map((x) => x.guess);
+    guesses = guesses.filter((guess) => correctguesses.includes(guess));
+    guesses.push(guess);
+    query.guess = Array.from(new Set(guesses));
     loc.search(query);
     console.log(loc.href());
     window.location = loc.href();
