@@ -1,0 +1,76 @@
+---
+---
+<!--
+Geburtstag rätsel.
+
+Bitte HTML nicht lesen – alle antworten sind heir geschrieben!
+-->
+<!doctype html>
+<html>
+    <head>
+        {% include analytics.html -%}
+        <title>Happy Birthday!</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        {% if site.description != nil and site.description != "" -%}
+        <meta name="description" content="{{site.description}}" />
+        {%- endif %}
+
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Emilys+Candy|Trocchi|Allura" rel="stylesheet">
+
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/css/bootstrap.min.css"/>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+        <style>
+            #wrong {
+                display: none;
+            }
+            .correct {
+                display: none;
+            }
+            body {
+                font-size: 150%;
+            }
+            .card {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body class="bg-dark">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <a class="link-unstyled" href="{{page.url}}">
+                    <div class="media">
+                        <i class="fas fa-birthday-cake mr-3" style="font-size:85px"></i>
+
+                        <div class="media-body">
+                            <h1 class="mt-0 lilybee">Gotti</h1>
+                            <p class="lead">Birthday Quiz</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="card">
+                <div class="card-body container-fluid">
+                    <section>
+{{content}}
+                    </section>
+                </div>
+            </div>
+            
+        
+        </div>
+        
+
+        <!-- Scripts -->
+        <script src="{{site.baseurl}}/assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="{{site.baseurl}}/assets/js/popper.min.js"></script>
+        <script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.19.1/URI.min.js"></script>
+    </body>
+</html>
