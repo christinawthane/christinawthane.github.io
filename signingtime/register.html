@@ -93,7 +93,7 @@ Spring registration is open now for children 4 years old or younger and their pa
             <div class="col-sm-10">
                 {% for class in classes %}
                 {% if class.label -%}
-                    {%- assign classid = label -%}
+                    {%- assign classid = class.label |slugify-%}
                 {%- else -%}
                     {%- capture classid %}{{class.time|slugify}}_{{class.dates|slugify}}{% endcapture -%}
                 {%- endif -%}
