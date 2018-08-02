@@ -2,6 +2,8 @@
 title: Course # Page title and menu item
 slug: Course  # last part of URL
 ---
+{%- assign classes = site.data.classes | where:"class", "signingtime" -%}
+{%- assign numclasses = classes | size -%}
 <div class="row">
     <div class="col-lg-8 col-md-6" markdown="1">
 The next course will be held in Fall 2018 for children 4 years old or younger and their parent(s)/caregivers.
@@ -10,12 +12,27 @@ Please check back for exact dates, or leave a message on the contact page to be 
 #### Schedule
 The course runs 4 weeks and is offered in both [Wipkingen]({{site.baseurl}}{% link map.md %}#wipkingen) and [Schwamendingen]({{site.baseurl}}{% link map.md %}#schwamendingen) locations.
 
+{% if numclasses > 0 %}
+Upcoming classes:
+
+{% for class in site.data.classes %}
+- {{class.dayofweek}} at {{class.time}} on {{class.dates}}.
+{%- case class.location -%}
+    {%- when "schwamendingen" %} [Schwamendingen]({{site.baseurl}}{% link map.md %}#schwamendingen)
+    {%- when "wipkingen" %} [Wipkingen]({{site.baseurl}}{% link map.md %}#wipkingen)
+    {%- else %} {{class.location | capitalize}}
+{%- endcase %}
+{% endfor %}
+
+{% endif %}
 #### Costs
 - First child: 125.-
 - Second child: 25.-
 - Adults: Free (with child)
 
-<!--<a href="{{site.baseurl}}{% link signingtime/register.html %}" class="btn btn-primary mr-2" role="button">Register</a>-->
+{% if numclasses > 0 -%}
+<a href="{{site.baseurl}}{% link signingtime/register.html %}" class="btn btn-primary mr-2" role="button">Register</a>
+{%- endif -%}
 <a href="{{site.baseurl}}{% link contact.html %}" role="button" class="btn btn-primary">Request more information</a>
 
 Registration includes a DVD and download code for Baby Signing Time Episode 1 with Rachel Coleman!

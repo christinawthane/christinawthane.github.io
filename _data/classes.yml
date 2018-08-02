@@ -1,0 +1,12 @@
+# Current signing time classes
+- class: signingtime
+  dayofweek: Tuesdays
+  time: 10:00 - 10:45
+  dates: October 2, 9, 16, and 23, 2018
+  location: schwamendingen
+  label: tu10
+- class: signingtime
+  dayofweek: Fridays
+  time: 14:00 - 14:45
+  dates: October 5, 12, 19, and 26, 2018
+  location: wipkingen
