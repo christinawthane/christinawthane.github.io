@@ -1,0 +1,21 @@
+# Current signing time classes
+#
+# Properties:
+# - class: currently 'signingtime'. Included for other future class types
+# - dayofweek: Plural day of the week (Tuesdays)
+# - time: Time range
+# - dates: Date range
+# - location: Either 'schwamendingen' or 'wipkingen'
+# - label: label to include in submitted form to identify this class. If ommitted, generated from other info.
+- class: signingtime
+  dayofweek: Tuesdays
+  time: 10:00 - 10:45
+  dates: October 2, 9, 16, and 23, 2018
+  location: schwamendingen
+  label: tues10
+- class: signingtime
+  dayofweek: Fridays
+  time: 14:00 - 14:45
+  dates: October 5, 12, 19, and 26, 2018
+  location: wipkingen
+  label: fri14

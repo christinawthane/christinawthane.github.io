@@ -104,3 +104,8 @@ a {
 
     }
 }
+
+// markdown sometimes generates p inside lists
+li p {
+    margin: inherit;
+}
