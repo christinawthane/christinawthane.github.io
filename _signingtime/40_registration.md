@@ -13,7 +13,7 @@ Please check back for exact dates, or leave a message on the contact page to be 
 The course runs 4 weeks and is offered in both [Wipkingen]({{site.baseurl}}{% link map.md %}#wipkingen) and [Schwamendingen]({{site.baseurl}}{% link map.md %}#schwamendingen) locations.
 
 {% if numclasses > 0 %}
-Upcoming classes:
+Upcoming classes: **Note: Class times & locations have changed**
 
 {% for class in site.data.classes %}
 - {{class.dayofweek}} at {{class.time}} on {{class.dates}}.
@@ -26,7 +26,7 @@ Upcoming classes:
 
 {% endif %}
 #### Costs
-- First child: 125.-
+- First child: 110.-
 - Second child: 25.-
 - Adults: Free (with child)
 
