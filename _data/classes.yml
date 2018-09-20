@@ -9,13 +9,26 @@
 # - label: label to include in submitted form to identify this class. If ommitted, generated from other info.
 - class: signingtime
   dayofweek: Tuesdays
-  time: 10:00 - 10:45
-  dates: October 2, 9, 16, and 23, 2018
+  time: 10:30 - 11:30
+  dates: October 2-23, 2018
   location: schwamendingen
-  label: tues10
+  label: tuesamoct
 - class: signingtime
-  dayofweek: Fridays
-  time: 14:00 - 14:45
-  dates: October 5, 12, 19, and 26, 2018
+  dayofweek: Thursdays
+  time: 10:30-11:30
+  dates: October 4-25, 2018
   location: wipkingen
-  label: fri14
+  label: thrsamoct
+
+- class: signingtime
+  dayofweek: Tuesdays
+  time: 10:30 - 11:30
+  dates: November 6-27, 2018
+  location: schwamendingen
+  label: tuesamnov
+- class: signingtime
+  dayofweek: Thursdays
+  time: 10:30-11:30
+  dates: November 1-22, 2018
+  location: wipkingen
+  label: thrsamnov
