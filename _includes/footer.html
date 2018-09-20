@@ -1,11 +1,25 @@
 <!-- Footer -->
-<section id="footer">
-    <div class="container">
+<footer id="footer" class="jumbotron mt-5">
+    <div class="container my-1">
         <div class="row">
-            <div class="col text-center my-3">
-                <hr/>
-                <p>&copy; 2018 Christine Bliven. All rights reserved.</p>
+            <div class="col-lg-6">
+                <a href="https://www.facebook.com/LilyBeeZurich/">
+                    <img class="mr-2" src="{{site.baseurl}}{% link images/flogo_RGB_HEX-72.png %}" alt="Facebook" width=36>
+                </a>
+                Facebook <a href="https://www.facebook.com/LilyBeeZurich/">fb.com/LilyBeeZurich</a>
+            </div>
+            <div class="col-lg-6">
+                <ul class="nobullet">
+                    <li><a href="{{site.baseurl}}{% link contact.html %}">Contact</a></li>
+                    <li><a href="{{site.baseurl}}{% link contact.html %}">About</a></li>
+                </ul>
+            </div>
+                    
+        </div>
+        <div class="row mt-1">
+            <div class="col">
+                <p>&copy; {{ 'now' | date: "%Y" }} Christine Bliven. All rights reserved.</p>
             </div>
         </div>
     </div>
-</section>
+</footer>
