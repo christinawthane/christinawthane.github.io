@@ -12,23 +12,23 @@
   time: 10:30 - 11:30
   dates: October 2-23, 2018
   location: schwamendingen
-  label: tuesamoct
+  #label: tuesamoct
 - class: signingtime
-  dayofweek: Thursdays
-  time: 10:30-11:30
-  dates: October 4-25, 2018
+  dayofweek: Tuesdays
+  time: 14:30-15:30
+  dates: October 2-23, 2018
   location: wipkingen
-  label: thrsamoct
+  #label: thrsamoct
 
 - class: signingtime
   dayofweek: Tuesdays
   time: 10:30 - 11:30
   dates: November 6-27, 2018
   location: schwamendingen
-  label: tuesamnov
+  #label: tuesamnov
 - class: signingtime
-  dayofweek: Thursdays
-  time: 10:30-11:30
-  dates: November 1-22, 2018
+  dayofweek: Tuesdays
+  time: 14:30-15:30
+  dates: November 6-27, 2018
   location: wipkingen
-  label: thrsamnov
+  #label: thrsamnov
