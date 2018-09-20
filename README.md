@@ -11,7 +11,7 @@ Simple pages are added to the root directory as HTML or Markdown files (e.g. abo
 
 Multi-section pages (`/signingtime` and `/babywearing`) are generated from directories of markdown files (e.g. `_signingtime` and `_babywearing`). The babywearing content is localized to English and German based on the `language` property in the YML header.
 
-The `_data` directory holds some configuration that gets used on multiple pages: the global nav bar, and the list of current courses.
+The `_data` directory holds some configuration that gets used on multiple pages: the global nav bar, and the list of current courses, and prices for courses.
 
 
 # Building locally

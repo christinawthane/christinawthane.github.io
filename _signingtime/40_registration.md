@@ -26,8 +26,8 @@ Upcoming classes: **Note: Class times & locations have changed**
 
 {% endif %}
 #### Costs
-- First child: 110.-
-- Second child: 25.-
+- First child: {{site.data.price.signingtime.first}}.-
+- Second child: {{site.data.price.signingtime.additional}}.-
 - Adults: Free (with child)
 
 {% if numclasses > 0 -%}
