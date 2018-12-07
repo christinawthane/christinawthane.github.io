@@ -100,6 +100,7 @@ Spring registration is open now for children 4 years old or younger and their pa
                  <div class="form-check">
                     <input class="form-check-input" type="radio" name="coursetime" id="{{classid}}_radio" value="{{classid}}">
                     <label class="form-check-label" for="{{classid}}_radio">
+                    {% if class.title %}<b>{{class.title}}</b>. {% endif -%}
                     {{class.dayofweek}} at {{class.time}} on {{class.dates}}.
 {%- case class.location -%}
     {%- when "schwamendingen" %} <a href="{{site.baseurl}}{% link map.md %}#schwamendingen">Schwamendingen</a>

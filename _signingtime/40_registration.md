@@ -16,7 +16,7 @@ The course runs 4 weeks and is offered in both [Wipkingen]({{site.baseurl}}{% li
 Upcoming classes: **Note: Class times & locations have changed**
 
 {% for class in site.data.classes %}
-- {{class.dayofweek}} at {{class.time}} on {{class.dates}}.
+- {% if class.title %}**{{class.title}}.** {% endif %}{{class.dayofweek}} at {{class.time}} on {{class.dates}}.
 {%- case class.location -%}
     {%- when "schwamendingen" %} [Schwamendingen]({{site.baseurl}}{% link map.md %}#schwamendingen)
     {%- when "wipkingen" %} [Wipkingen]({{site.baseurl}}{% link map.md %}#wipkingen)
