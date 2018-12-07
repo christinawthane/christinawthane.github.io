@@ -6,8 +6,7 @@ slug: Course  # last part of URL
 {%- assign numclasses = classes | size -%}
 <div class="row">
     <div class="col-lg-8 col-md-6" markdown="1">
-The next course will be held in Fall 2018 for children 4 years old or younger and their parent(s)/caregivers.
-Please check back for exact dates, or leave a message on the contact page to be notified when the schedule is released.
+Baby Sigining Time (BST) 1 covers the basic signs that will be most useful at home such as food and family signs. I recommend you take this class first. BST 2 covers signs that are probably less used, but still useful such as clothes and transportation signs. I recommend you take this class after taking BST 1, but that is not required. If the scheduling works out better for you to take it in the opposite order, please feel free to do so. 
 
 #### Schedule
 The course runs 4 weeks and is offered in both [Wipkingen]({{site.baseurl}}{% link map.md %}#wipkingen) and [Schwamendingen]({{site.baseurl}}{% link map.md %}#schwamendingen) locations.
