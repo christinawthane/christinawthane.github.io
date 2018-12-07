@@ -6,8 +6,8 @@ slug: Course  # last part of URL
 {%- assign numclasses = classes | size -%}
 <div class="row">
     <div class="col-lg-8 col-md-6" markdown="1">
-Baby Signing Time (BST) 1 covers the basic signs that will be most useful at
-home such as food and family signs. I recommend you take this class first. BST
+Baby Signing Time (BST) 1 covers basic signs such as food and family that will be most useful at
+home. I recommend you take this class first. BST
 2 covers signs that are probably less used, but still useful, such as clothes
 and transportation signs. I recommend you take this class after taking BST 1,
 but that is not required. If the scheduling works out better for you to take it
