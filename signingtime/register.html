@@ -91,7 +91,7 @@ Spring registration is open now for children 4 years old or younger and their pa
         <div class="form-row form-group">
             <label for="classselect" class="col-sm-2 col-form-label">Course Time</label>
             <div class="col-sm-10">
-                {% for class in classes %}
+                {% for class in classes %}{% unless class.cancelled %}
                 {% if class.label -%}
                     {%- assign classid = class.label-%}
                 {%- else -%}
@@ -112,7 +112,7 @@ Spring registration is open now for children 4 years old or younger and their pa
 {%- endcase %}
                     </label>
                 </div>
-                {% endfor %}
+                {% endunless %}{% endfor %}
             </div>
         </div>
     </section>

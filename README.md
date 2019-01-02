@@ -22,6 +22,12 @@ The site is generated using jekyll and markdown. This happens automatically on g
 gem install jekyll bundler
 ```
 
+Install dependencies:
+
+```
+bundle
+```
+
 Start a local development server with
 
 ```

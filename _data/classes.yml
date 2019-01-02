@@ -19,27 +19,28 @@
 # - dates: Date range
 # - location: Either 'schwamendingen' or 'wipkingen'
 # - label: label to include in submitted form to identify this class. If ommitted, generated from other info.
+# - cancelled: set to 'true' to mark the class as being cancelled
 - class: signingtime
   title: Baby Signing Time 1
   dayofweek: Tuesdays
   time: 15:00-15:50
   dates: January 8-29, 2019
   location: wipkingen
-  #label: tuespmjan1
+  cancelled: true
 - class: signingtime
   title: Baby Signing Time 1
   dayofweek: Fridays
   time: 14:00-14:50
   dates: January 4-25, 2019
   location: schwamendingen
-  #label: fripmjan1
+  cancelled: true
 - class: signingtime
   title: Baby Signing Time 2
   dayofweek: Fridays
   time: 15:00-15:50
   dates: January 4-25, 2019
   location: schwamendingen
-  #label: fripmjan2
+  cancelled: true
 
 - class: signingtime
   title: Baby Signing Time 1
@@ -47,25 +48,21 @@
   time: 14:00-14:50
   dates: February 5-26, 2019
   location: wipkingen
-  #label: tuespm1
 - class: signingtime
   title: Baby Signing Time 2
   dayofweek: Tuesdays
   time: 15:00-15:50
   dates: February 5-26, 2019
   location: wipkingen
-  #label: tuespm2
 - class: signingtime
   title: Baby Signing Time 2
   dayofweek: Fridays
   time: 14:00-14:50
   dates: February 1-22, 2019
   location: schwamendingen
-  label: fripmjan2
 - class: signingtime
   title: Baby Signing Time 1
   dayofweek: Fridays
   time: 15:00-15:50
   dates: February 1-22, 2019
   location: schwamendingen
-  #label: fripmjan1

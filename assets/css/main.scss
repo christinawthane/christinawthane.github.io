@@ -115,3 +115,21 @@ li p {
     list-style: none;
     padding-left: 0px;
 }
+
+.cancelled {
+    &::before {
+        content: "Cancelled";
+        text-decoration: none;
+        font-variant: small-caps;
+        font-weight: bold;
+        // Needed to prevent text-decoration from bleeding through
+        display: inline-block;
+        margin-right: 1em;
+    }
+    color: red;
+    text-decoration: line-through;
+    
+    a {
+        color: red;
+    }
+}
