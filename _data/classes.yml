@@ -37,3 +37,9 @@
   dates: March 1-22, 2019
   location: schwamendingen
 
+- class: signingtime
+  title: Baby Signing Time 1
+  dayofweek: Tuesdays
+  time: 15:00-15:50
+  dates: April 9-30, 2019
+  location: wipkingen
