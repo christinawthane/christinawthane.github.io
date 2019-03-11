@@ -23,12 +23,7 @@
 
 
 
-- class: signingtime
-  title: Baby Signing Time 2
-  dayofweek: Fridays
-  time: 14:00-14:50
-  dates: February 1-22, 2019
-  location: schwamendingen
+
 
 - class: signingtime
   title: Baby Signing Time 1
@@ -43,3 +38,17 @@
   time: 15:00-15:50
   dates: April 9-30, 2019
   location: wipkingen
+  
+  - class: signingtime
+  title: Baby Signing Time 1
+  dayofweek: Fridays
+  time: 14:00-14:50
+  dates: April 5- May 3, 2019 (No class April 19)
+  location: schwamendingen
+  
+    - class: signingtime
+  title: Baby Signing Time 2
+  dayofweek: Fridays
+  time: 15:00-15:50
+  dates: April 5- May 3, 2019 (No class April 19)
+  location: schwamendingen
