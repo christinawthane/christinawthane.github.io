@@ -43,7 +43,7 @@
   dates: April 26, May 3, 10 & 17
   location: wipkingen
   
-  - class: signingtime
+- class: signingtime
   title: Baby Signing Time 1
   dayofweek: Tuesdays
   time: 10:00-10:50
