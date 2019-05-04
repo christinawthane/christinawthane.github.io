@@ -22,12 +22,6 @@
 # - cancelled: set to 'true' to mark the class as being cancelled
 
 
-- class: signingtime
-  title: Baby Signing Time 1
-  dayofweek: Fridays
-  time: 15:00-15:50
-  dates: March 1-22, 2019
-  location: schwamendingen
 
 - class: signingtime
   title: Baby Signing Time 1
@@ -39,15 +33,14 @@
 - class: signingtime
   title: Baby Signing Time 2
   dayofweek: Fridays
-  time: 15:00-15:50
-  dates: April 26, May 3, 10 & 17
+  time: 14:00-14:50
+  dates: June 7, 14, 21 & July 5
   location: wipkingen
   
 - class: signingtime
   title: Baby Signing Time 1
   dayofweek: Tuesdays
   time: 10:00-10:50
-  dates: April 23, 30 May 14, 21, 2019
+  dates: June 18 & 25 & July 2 & 9
   location: schwamendingen
-  cancelled: true
 
