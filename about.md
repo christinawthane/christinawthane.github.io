@@ -3,13 +3,18 @@ title: About
 layout: card
 ---
 
-<div class="media">
-
-<img alt="Christine Bliven" src="{% link images/profile_pic_oval_370.png %}" class="mr-4 align-self-center" />
-
-<div class="media-body" markdown="1">
-
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12 col-sm-3"></div>
+<div class="col-xs-12 col-sm-9" markdown="1">
 # About Me
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-3">
+<img alt="Christine Bliven" src="{% link images/profile_pic_oval_370.png %}" class="img-fluid mx-auto d-block" />
+</div>
+<div class="col-xs-12 col-sm-9" markdown="1">
 
 My name is Christine Bliven. I was born in Zürich and lived here
 nine years before moving to the US (Seattle area) with my family.
@@ -56,4 +61,4 @@ children.
 
 </div>
 </div>
-
+</div>
