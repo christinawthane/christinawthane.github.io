@@ -36,9 +36,11 @@ collections:
   signingtime:
     output: false
     #permalink: /en/:collection/:title/
+  signandplay:
+    output: false
   contact:
     output: false
-  
+
 defaults:
   - scope:
       path: ""
@@ -46,7 +48,7 @@ defaults:
     values:
       #layout: signingpage
       language: en
-  
+
 
 # Build settings
 markdown: kramdown

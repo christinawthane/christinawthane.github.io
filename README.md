@@ -7,11 +7,25 @@ Source for http://lilybee.ch. The site is hosted on [github](https://github.com/
 
 Where possible, content has been written in Markdown for easy editing. This gets combined with jekyll templates to build the page in a consistent style.
 
-Simple pages are added to the root directory as HTML or Markdown files (e.g. about.md). 
+Simple pages are added to the root directory as HTML or Markdown files (e.g. about.md).
 
 Multi-section pages (`/signingtime` and `/babywearing`) are generated from directories of markdown files (e.g. `_signingtime` and `_babywearing`). The babywearing content is localized to English and German based on the `language` property in the YML header.
 
 The `_data` directory holds some configuration that gets used on multiple pages: the global nav bar, and the list of current courses, and prices for courses.
+
+## Adding a new page
+
+Detailed instructions for adding a new multi-section page.
+1. Create a new folders for the page, both with and without an underscore
+   (`/newpage/` and `/_newpage/`)
+2. Copy `signingtime/index.html` into `/newpage/index.hmtl`. Edit and update
+   the sections.
+3. Copy `_signingtime/00_template.md` into `/newpage/10_introduction.md`.
+   Add some content and remember to delete the `published: false` line
+4. Edit `_config.yml`. Add the new page name to the 'collections' section.
+   Include the `output: false` to prevent pages from generating for each section.
+5. Serve jekyll and test that `/newpage/` is a valid route
+6. Edit `/_data/global_nav.yml` and add the new page to the menu
 
 
 # Building locally

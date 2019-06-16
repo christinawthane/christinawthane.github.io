@@ -12,6 +12,10 @@
   en: Signing Time!
   de: Signing Time!
   url: /signingtime
+- slug: signandplay
+  en: Sign and Play
+  de: Sign and Play
+  url: /signandplay
 - slug: about
   en: About
   de: Über mich
