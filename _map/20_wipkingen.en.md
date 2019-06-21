@@ -10,4 +10,4 @@ Some classes are held in the [Hebammenpraxis Zürich](http://www.hebammenpraxis-
 > Nordstrasse 108<br/>
 > 8037 Zürich
 
-<a href="{% link signingtime/index.html %}" role="button" class="btn btn-primary">Friday Signing Time Classes</a>
+<a href="{% link signingtime/index.html %}" role="button" class="btn btn-primary">Signing Time Classes Hebammenpraxis</a>
