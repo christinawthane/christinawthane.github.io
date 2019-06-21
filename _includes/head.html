@@ -1,0 +1,18 @@
+{% include analytics.html -%}
+<title>{{site.title}}{% if page.title != nil and page.title != "" %} - {{page.title}}{% endif %}</title>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+{% if site.description != nil and site.description != "" -%}
+<meta name="description" content="{{site.description}}" />
+{%- endif %}
+
+<link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Emilys+Candy|Trocchi|Allura" rel="stylesheet">
+
+<link rel="stylesheet" href="{{site.baseurl}}/assets/css/bootstrap.min.css"/>
+
+<link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css" />
+
+{% comment %}
+Scripts are loaded at the end of the page, not in the head
+{% endcomment %}
