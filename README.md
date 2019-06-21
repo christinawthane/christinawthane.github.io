@@ -61,7 +61,7 @@ bundle exec jekyll serve
 
 # Tips
 
-**Links**
+## Links
 
 Use jekyll to generate the right path for a link: `{{site.baseurl}}{% link path/to/file.md %}`. This allows the path to change if the permalink for the page gets updated, and throws an error if the link is broken.
 
@@ -72,3 +72,14 @@ Markdown, resolves to /babywearing:
 <p>HTML, resolves to /about:</p>
 <a href="{{site.baseurl}}{% link about.md %}">About</a>
 ```
+
+## Scrollspy
+
+To get the navbar to "stick" to the top properly, all pages should have the following frontmatter:
+
+```
+scrollspy: navbar
+scrollspy_offset: 56
+```
+
+See [Bootstrap scrollspy](https://getbootstrap.com/docs/4.3/components/scrollspy/).
