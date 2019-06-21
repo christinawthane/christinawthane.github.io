@@ -23,24 +23,27 @@
 
 
 
-- class: signingtime
-  title: Baby Signing Time 1
-  dayofweek: Fridays
-  time: 14:00-14:50
-  dates: April 26, May 3, 10 & 17
-  location: wipkingen
   
-- class: signingtime
-  title: Baby Signing Time 2
-  dayofweek: Fridays
-  time: 14:00-14:50
-  dates: June 7, 14, 21 & July 5
-  location: wipkingen
+
   
 - class: signingtime
   title: Baby Signing Time 1
   dayofweek: Tuesdays
   time: 10:00-10:50
-  dates: June 18 & 25 & July 2 & 9
+  dates: June 25 & July 2, 9 & 16
+  location: schwamendingen
+  
+  - class: signingtime
+  title: Baby Signing Time 2
+  dayofweek: Tuesdays
+  time: 14:00-14:50
+  dates: September 3, 10, 17 & 24
+  location: wipkingen
+  
+  - class: signingtime
+  title: Baby Signing Time 1
+  dayofweek: Fridays
+  time: 10:00-10:50
+  dates: September 6, 13, 20 & 27
   location: schwamendingen
 
