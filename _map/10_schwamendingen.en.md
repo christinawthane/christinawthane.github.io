@@ -16,4 +16,4 @@ Consultations are held in the [Gut-Betucht](http://www.gut-betucht.ch/) shop in 
 **Directions**: The shop is located next to the Probstei tram stop. Three parking places are available next to the shop. Additional blue-Zone street parking is available off nearby Probsteistrasse. Consultations are normally held in the Kursraum room.
 
 <a href="{% link babywearing/index.html %}" role="button" class="btn btn-primary">Consultations</a>
-<a href="{% link signingtime/index.html %}" role="button" class="btn btn-primary">Tuesday Signing Time Classes</a>
+<a href="{% link signingtime/index.html %}" role="button" class="btn btn-primary">Signing Time Classes Gut Betucht</a>
