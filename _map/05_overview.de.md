@@ -4,17 +4,17 @@ language: de
 key: overview
 ---
 
-Trageberatungen finden im [Schwamendingen](#schwamendingen) im [Gut-Betucht](http://www.gut-betucht.ch/) Shop statt.
+Trageberatungen finden im [Schwamendingen](#gutbetucht) im [Gut Betucht](http://www.gut-betucht.ch/) Shop statt.
 Beratungen bei dir zuhause sind möglich nach Vereinbarung und mit zusätzlichem Aufschlag je nach Distanz.
 
 {: .text-center}
-<a href="{{site.baseurl}}{% link babywearing/index.html %}" role="button" class="btn btn-primary">Beratungen Info</a>
-<a href="#schwamendingen" role="button" class="btn btn-primary">Schwamendingen</a>
+<a href="{{site.baseurl}}{% link babywearing/index.html %}" role="button" class="btn btn-primary mb-1">Beratungen Info</a>
+<a href="#gutbetucht" role="button" class="btn btn-info mb-1">Schwamendingen</a>
 
 
-Signing Time Kurse finden in Schwamendingen im [Gut-Betucht](http://www.gut-betucht.ch/) Shop sowie in [Wipkingen](#wipkingen) in der [Hebammenpraxis Zürich](http://www.hebammenpraxis-zuerich.ch/) statt.
+Signing Time Kurse finden im [Gut Betucht](#gutbetucht) Shop sowie in der [Hebammenpraxis Zürich](#hebammenpraxis) statt.
 
 {: .text-center}
 <a href="{{site.baseurl}}{% link signingtime/index.html %}" role="button" class="btn btn-primary">Signing Time Info</a>
-<a href="#schwamendingen" role="button" class="btn btn-primary">Schwamendingen</a>
-<a href="#wipkingen" role="button" class="btn btn-primary">Wipkingen</a>
+<a href="#gutbetucht" role="button" class="btn btn-info mb-1">Gut Betucht</a>
+<a href="#hebammenpraxis" role="button" class="btn btn-info mb-1">Hebammenpraxis Zurich</a>

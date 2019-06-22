@@ -17,13 +17,13 @@ Spring registration is open now for children 4 years old or younger and their pa
         <h3>Contact Information</h3>
         <div class="form-row form-group">
             <label for="parentnamefield" class="col-sm-2 col-form-label">Parent Name</label>
-            <div class="col-sm-10">       
+            <div class="col-sm-10">
                 <input id="parentnamefield" type="text" class="form-control" placeholder="First Last" name="parentname"/>
             </div>
         </div>
         <div class="form-row form-group">
             <label for="emailfield" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-10">       
+            <div class="col-sm-10">
                 <input id="emailfield" type="email" class="form-control" placeholder="Email" name="_replyto"/>
             </div>
         </div>
@@ -38,7 +38,7 @@ Spring registration is open now for children 4 years old or younger and their pa
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                             <label class="form-check-label" for="defaultCheck1">
                             Prefer SMS
-                            </label> 
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -57,21 +57,21 @@ Spring registration is open now for children 4 years old or younger and their pa
         </div>
         <div class="form-row form-group">
             <label for="child1namefield" class="col-sm-2 col-form-label">Child 1 Name</label>
-            <div class="col-sm-4">       
+            <div class="col-sm-4">
                 <input id="child1namefield" type="text" class="form-control" placeholder="Name" name="child1name"/>
             </div>
             <label for="child1birthdayfield" class="col-sm-2 col-form-label">Birthday</label>
-            <div class="col-sm-4">       
+            <div class="col-sm-4">
                 <input id="child1birthdayfield" type="text" class="form-control" placeholder="DD-MM-YYYY" name="child1birthday"/>
             </div>
         </div>
         <div class="form-row form-group">
             <label for="child2namefield" class="col-sm-2 col-form-label">Child 2 Name</label>
-            <div class="col-sm-4">       
+            <div class="col-sm-4">
                 <input id="child2namefield" type="text" class="form-control" placeholder="Name" name="child2name"/>
             </div>
             <label for="child2birthdayfield" class="col-sm-2 col-form-label">Birthday</label>
-            <div class="col-sm-4">       
+            <div class="col-sm-4">
                 <input id="child2birthdayfield" type="text" class="form-control" placeholder="DD-MM-YYYY" name="child2birthday"/>
             </div>
         </div>
@@ -85,7 +85,7 @@ Spring registration is open now for children 4 years old or younger and their pa
         <h3>Course</h3>
         <div class="form-row">
             <div class="col">
-                <p>The course runs 4 weeks and is offered in at <a href="{{site.baseurl}}{% link map.md %}#schwamendingen">Gut Betucht Babywearing</a> in the  in Schwamendingen neighborhood and <a href="{{site.baseurl}}{% link map.md %}#wipkingen">Hebammenpraxis Zürich</a> in Wipkingen.</p>
+                <p>The course runs 4 weeks and is offered in at <a href="{{site.baseurl}}{% link map.md %}#gutbetucht">Gut Betucht Babywearing</a> in the  in Schwamendingen neighborhood and <a href="{{site.baseurl}}{% link map.md %}#hebammenpraxis">Hebammenpraxis Zürich</a> in Wipkingen.</p>
             </div>
         </div>
         <div class="form-row form-group">
@@ -106,9 +106,10 @@ Spring registration is open now for children 4 years old or younger and their pa
                     {% if class.title %}<b>{{class.title}}</b>. {% endif -%}
                     {{class.dayofweek}} at {{class.time}} on {{class.dates}}.
 {%- case class.location -%}
-    {%- when "schwamendingen" %} <a href="{{site.baseurl}}{% link map.md %}#schwamendingen">Schwamendingen</a>
-    {%- when "wipkingen" %} <a href="{{site.baseurl}}{% link map.md %}#wipkingen">Wipkingen</a>
-    {%- else %} {{class.location | capitalize}}
+    {%- when "hebammenpraxis" %} <a href="{{site.baseurl}}{% link map.md %}#gutbetucht">Gut Betucht</a>
+    {%- when "gutbetucht" %} <a href="{{site.baseurl}}{% link map.md %}#hebammenpraxis">Hebammenpraxis Zurich</a>
+    {%- when "lilybee" %} <a href="{{site.baseurl}}{% link map.md %}#lilybee">LilyBee</a>
+    {%- else %} <a href="{{site.baseurl}}{% link map.md %}">{{class.location | capitalize}}</a>
 {%- endcase %}
                     </label>
                 </div>
@@ -154,7 +155,7 @@ Spring registration is open now for children 4 years old or younger and their pa
                     <label class="form-check-label" for="paymentCashfield">
                     Cash
                     </label>
-                </div> 
+                </div>
             </div>
         </div>
         <div class="form-row">

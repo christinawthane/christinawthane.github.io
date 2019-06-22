@@ -1,10 +1,10 @@
 ---
-title: Gut-Betucht
+title: Gut Betucht
 language: de
-key: schwamendingen
+key: gutbetucht
 ---
 
-Beratungen finden im [Gut-Betucht](http://www.gut-betucht.ch/) Shop in Schwamendingen statt:
+Beratungen finden im [Gut Betucht](http://www.gut-betucht.ch/) Shop in Schwamendingen statt:
 
 > Gut Betucht, Inh. Sourlier<br/>
 > Kursraum<br/>
@@ -15,5 +15,5 @@ Beratungen finden im [Gut-Betucht](http://www.gut-betucht.ch/) Shop in Schwamend
 
 **Richtungsangaben**: Das Geschäft finden Sie direkt an der Tramhaltestelle Probstei. Beim Kursraum gibt es 3 Kundenparkplätze. Es gibt an der nahegelegenen Probsteistrasse noch blaue Zone Parkplätze. Beratungen sind normallerweise im Kursraum.
 
-<a href="{% link babywearing/index.html %}" role="button" class="btn btn-primary">Trageberatungen</a>
-<a href="{% link signingtime/index.html %}" role="button" class="btn btn-primary">Dienstag Signing Time Kurse (Englisch)</a>
+<a href="{% link babywearing/index.html %}" role="button" class="btn btn-primary mb-1">Trageberatungen</a>
+<a href="{% link signingtime/index.html %}" role="button" class="btn btn-primary mb-1">Signing Time Kurse</a>

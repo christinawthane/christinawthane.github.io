@@ -23,6 +23,7 @@ body {
     position: relative;
 }
 
+
 // Link without blue underline
 .link-unstyled, .link-unstyled:link, .link-unstyled:hover {
     color: inherit;
@@ -55,10 +56,10 @@ body {
     h1 {
         @extend .lilybee;
     }
-    
+
     font-family: 'Trocchi', serif;
     //font-family: 'Allura', cursive;
-    
+
     background: $bst-wheat;
 }
 
@@ -69,6 +70,20 @@ body {
     background: $bst-blue;
     border-color: $bst-blue;
 }
+
+.btn-info {
+    color: black;
+    background: $bst-yellow;
+    border-color: $bst-yellow;
+
+    &:hover {
+        color: black;
+        border-color: $bst-yellow;
+        background: $bst-wheat;
+    }
+}
+
+
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background: $bst-yellow;
     color: black;
@@ -97,7 +112,7 @@ a {
         height: 0px;
         border-top: 8px solid transparent;
         border-bottom: 8px solid transparent;
-        border-left: 8px solid #727272; 
+        border-left: 8px solid #727272;
         position: absolute;
         top: calc(50% - 8px);
         left: .75rem;
@@ -128,7 +143,7 @@ li p {
     }
     color: red;
     text-decoration: line-through;
-    
+
     a {
         color: red;
     }

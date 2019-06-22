@@ -14,10 +14,10 @@ but that is not required. If the scheduling works out better for you to take it
 in the opposite order, please feel free to do so.
 
 #### Schedule
-The course runs 4 weeks and is offered in both [Wipkingen]({{site.baseurl}}{% link map.md %}#wipkingen) and [Schwamendingen]({{site.baseurl}}{% link map.md %}#schwamendingen) locations.
+The course runs 4 weeks and is offered at both [Hebammenpraxis Zurich]({{site.baseurl}}{% link map.md %}#hebammenpraxis) (Wipkingen neighborhood) and [Gut Betucht]({{site.baseurl}}{% link map.md %}#gutbetucht) (Schwamendingen neighborhood) locations.
 
 {% if numclasses > 0 %}
-Upcoming classes: 
+Upcoming classes:
 
 {% for class in site.data.classes %}
 - {% if class.cancelled -%}
@@ -25,8 +25,9 @@ Upcoming classes:
   {%- endif -%}
   {%- if class.title %}**{{class.title}}.** {% endif %}{{class.dayofweek}} at {{class.time}} on {{class.dates}}.
 {%- case class.location -%}
-    {%- when "schwamendingen" %} [Schwamendingen]({{site.baseurl}}{% link map.md %}#schwamendingen)
-    {%- when "wipkingen" %} [Wipkingen]({{site.baseurl}}{% link map.md %}#wipkingen)
+    {%- when "gutbetucht" %} [Gut Betucht]({{site.baseurl}}{% link map.md %}#gutbetucht)
+    {%- when "hebammenpraxis" %} [Hebammenpraxis Zurich]({{site.baseurl}}{% link map.md %}#hebammenpraxis)
+    {%- when "lilybee" %} [LilyBee]({{site.baseurl}}{% link map.md %}#lilybee)
     {%- else %} {{class.location | capitalize}}
 {%- endcase -%}
 {% endfor %}
@@ -46,7 +47,7 @@ Registration includes a DVD and download code for Baby Signing Time Episode 1 wi
 
 </div>
 <div class="col-lg-4 col-md-6">
-    <!-- 
+    <!--
     Karl Fredrickson (https://unsplash.com/photos/GEJxI_QRPwM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     Unsplash (https://unsplash.com/collections/204878/hannahrayna-agaist-the-world?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     -->
