@@ -148,6 +148,14 @@ li p {
         color: red;
     }
 }
+
+// For a responsive, centered image leading into a section
+.head-img {
+    img {
+        max-height: 250px;
+    };
+}
+
 .collapsible-events {
         list-style: none;
 
