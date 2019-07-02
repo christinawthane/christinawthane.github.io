@@ -10,8 +10,12 @@
 <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Emilys+Candy|Trocchi|Allura" rel="stylesheet">
 
 <link rel="stylesheet" href="{{site.baseurl}}/assets/css/bootstrap.min.css"/>
-
 <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css" />
+{% if page.extracss -%}
+{% for css in page.extracss -%}
+<link rel="stylesheet" href="{{css}}" />
+{%- endfor %}
+{%- endif %}
 
 {% comment %}
 Scripts are loaded at the end of the page, not in the head

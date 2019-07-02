@@ -57,8 +57,10 @@ body {
         @extend .lilybee;
     }
 
-    font-family: 'Trocchi', serif;
-    //font-family: 'Allura', cursive;
+    h1, h2, h3, h4, h5, h6, p {
+        font-family: 'Trocchi', serif;
+        //font-family: 'Allura', cursive;
+    }
 
     background: $bst-wheat;
 }
@@ -120,6 +122,9 @@ a {
     }
 }
 
+.dropdown-menu {
+    z-index: 1050; // Needs to be higher than scrollspy (1020)
+}
 // markdown sometimes generates p inside lists
 li p {
     margin: inherit;
@@ -156,8 +161,29 @@ li p {
     };
 }
 
+.eventselect {
+    .opt.disabled {
+        span {
+            text-decoration: line-through;
+        }
+        &::after {
+            content: "CANCELLED";
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+    }
+    option:disabled {
+        text-decoration: line-through;
+        &::after {
+            content: "CANCELLED";
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+    }
+}
+
 .collapsible-events {
-        list-style: none;
+    list-style: none;
 
     .event {
         // Match default font size to h5 so the baseline is uniform
