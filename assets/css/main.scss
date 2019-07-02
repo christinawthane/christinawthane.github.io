@@ -148,3 +148,108 @@ li p {
         color: red;
     }
 }
+
+// For a responsive, centered image leading into a section
+.head-img {
+    img {
+        max-height: 250px;
+    };
+}
+
+.collapsible-events {
+        list-style: none;
+
+    .event {
+        // Match default font size to h5 so the baseline is uniform
+        font-size: 1.25rem;
+        padding: 5px;
+        border-bottom: solid 1px #ccc;
+
+        .event-head {
+            vertical-align: middle;
+            display: table;
+            width: 100%;
+
+            .event-thumbnail {
+                width: 75px;
+                height: 75px;
+            }
+            .stacked-date {
+                width: 50px;
+                padding: 0px;
+                display: inline-block;
+                text-align: center;
+                position: relative;
+                bottom: -8pt;
+
+                .dayofweek, .month {
+                    height: 8pt;
+                    line-height: 8pt;
+                    font-size: 8pt;
+                }
+                .dayofmonth {
+                    height: 25px;
+                    line-height: 25px;
+                    font-size: 20pt;
+                }
+            }
+
+            .event-title {
+                display: inline-block;
+            }
+            .event-time {
+                font-size: 50%;
+                color: grey;
+                margin-right: 1em;
+            }
+            .event-rsvp {
+                display: table-cell;
+                vertical-align: middle;
+                .btn {
+                    float: right;
+                }
+            }
+
+            .collapse-caret {
+                color: #ccc;
+
+                &::before {
+                    content: "\f0d7"; //"\f0d8"
+                    font-family: FontAwesome;
+                    font-weight: 900;
+                }
+                &:hover {
+                    text-decoration: inherit;
+                    color: $bst-blue;
+                }
+
+                &.expanded::before {
+                    content: "\f0d8";
+                    color: $bst-blue;
+                }
+                &.expanded:hover {
+                    text-decoration: inherit;
+                    color: #ccc;
+                }
+
+            }
+
+
+            .collapse-caret::before {
+                transition: font-size 0.5s ease;
+            }
+            &:hover .collapse-caret::before {
+                font-size: 120%;
+            }
+        }
+
+        .event-body {
+            margin-left: 100px;
+            font-size: 1rem;
+
+            p {
+                margin-left: 0px;
+            }
+        }
+    }
+}
