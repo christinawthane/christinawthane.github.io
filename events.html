@@ -24,7 +24,7 @@ extrajs:
 {% assign events = site.data.events | sort: "date" %}
 {% for event in events %}
 {% assign uid = event.date | append: event.title | append: event.time | slugify: "latin" %}
-<li class="event">
+<li class="event{% if event.cancelled %} cancelled{% endif %}">
     <div class="event-head">
         <div class="border d-inline-block mr-3 rounded">
             <img src="{{ event.image }}" class="event-thumbnail p-1 rounded" alt="thumbnail"/>
@@ -40,7 +40,8 @@ extrajs:
            aria-expanded="false" aria-controls="event1" aria-label="Expand">
         </a>
         <div class="event-rsvp">
-            <button class="btn btn-primary" type="button" >RSVP</button>
+            <button class="btn btn-primary{% if event.cancelled %} disabled{% endif %}"
+                type="button" >RSVP</button>
         </div>
     </div>
     <div id="event-{{uid}}" class="event-body collapse">

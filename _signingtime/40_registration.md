@@ -20,9 +20,7 @@ The course runs 4 weeks and is offered at both [Hebammenpraxis Zurich]({{site.ba
 Upcoming classes:
 
 {% for class in site.data.classes %}
-- {% if class.cancelled -%}
-    {: .cancelled}
-  {%- endif -%}
+- {: .signingtimeclass {% if class.cancelled -%}.cancelled{%- endif -%}}
   {%- if class.title %}**{{class.title}}.** {% endif %}{{class.dayofweek}} at {{class.time}} on {{class.dates}}.
 {%- case class.location -%}
     {%- when "gutbetucht" %} [Gut Betucht]({{site.baseurl}}{% link map.md %}#gutbetucht)
