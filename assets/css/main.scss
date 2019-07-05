@@ -19,10 +19,31 @@ $bg-yellow: #ffde2d; // a strong yellow color
 
 $hpsection-background : #5c1c72;
 
+// Customize bootstrap
+$primary: $bst-blue;
+$danger: $bst-red;
+$info: $bst-yellow;
+
+$body-bg: $logo-purple;
+$jumbotron-bg: $bst-wheat;
+
+// Hack; we should be compiling bootstrap from SASS & overriding $brand-primary
+// or else using the customizer
+// .btn-primary {
+//     color: white;
+//     background: $bst-blue;
+//     border-color: $bst-blue;
+// }
+
+
+@import "bootstrap/bootstrap";
 
 body {
-    background: $logo-purple;
     position: relative;
+}
+
+.btn-info {
+    @include button-variant($info, $info, $bst-wheat);
 }
 
 
@@ -63,29 +84,9 @@ body {
         font-family: 'Trocchi', serif;
         //font-family: 'Allura', cursive;
     }
-
-    background: $bst-wheat;
 }
 
-// Hack; we should be compiling bootstrap from SASS & overriding $brand-primary
-// or else using the customizer
-.btn-primary {
-    color: white;
-    background: $bst-blue;
-    border-color: $bst-blue;
-}
 
-.btn-info {
-    color: black;
-    background: $bst-yellow;
-    border-color: $bst-yellow;
-
-    &:hover {
-        color: black;
-        border-color: $bst-yellow;
-        background: $bst-wheat;
-    }
-}
 
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {

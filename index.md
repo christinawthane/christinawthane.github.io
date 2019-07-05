@@ -35,7 +35,7 @@ layout: home
     <section id="events">
     <div class="row text-light text-center">
         <div class="col mt-5 mb-2">
-            <button type="button" class="btn btn-default btn-sm float-right position-relative"
+            <button type="button" class="btn btn-light btn-sm float-right position-relative"
              style="bottom: -10px" id="expandall">Expand All</button>
             <header>
                 <h2>Events</h2>
