@@ -2,12 +2,19 @@
 List of all events
 
 @param expandbutton Include the 'Expand All' control?
+@param class Show only events in this class
 {% endcomment -%}
 {%- if include.expandbutton == nil or include.expandbutton -%}
 <button type="button" class="btn btn-default btn-sm float-right" id="expandall">Expand All</button>
 {%- endif -%}
 <ul class="collapsible-events">
-{% assign events = site.data.events | sort: "date" %}
+{% if include.class %}
+    <!-- Filtering events where class: {{include.class}} -->
+    {% assign events = site.data.events | where:"class",include.class | sort: "date" %}
+{% else %}
+    <!-- Showing all events -->
+    {% assign events = site.data.events | sort: "date" %}
+{% endif -%}
 {% for event in events %}
 {% capture eventid %}{% include eventid.html %}{% endcapture -%}
 {% assign uid = eventid | slugify: "latin" %}

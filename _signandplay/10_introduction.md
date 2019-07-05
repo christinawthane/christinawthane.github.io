@@ -15,6 +15,3 @@ Interested in learning basic signs that build on each other as you go? Sign up f
 (Pay in advance by bank transfer or on the day of with cash or card).
 
 *Location:* [LilyBee]({{site.baseurl}}{% link map.md %}#lilybee)
-
-
-*Schedule Pending*
