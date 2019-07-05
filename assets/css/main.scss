@@ -124,7 +124,7 @@ a {
     z-index: 1050; // Needs to be higher than scrollspy (1020)
 }
 // markdown sometimes generates p inside lists
-li p {
+li>p {
     margin: inherit;
 }
 
