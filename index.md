@@ -31,4 +31,23 @@ layout: home
             </div>
         </div>
     </div>
+
+    <section id="events">
+    <div class="row text-light text-center">
+        <div class="col mt-5 mb-2">
+            <button type="button" class="btn btn-default btn-sm float-right position-relative"
+             style="bottom: -10px" id="expandall">Expand All</button>
+            <header>
+                <h2>Events</h2>
+            </header>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body container-fluid">
+            <section>
+                {% include events.html expandbutton=false%}
+            </section>
+        </div>
+    </div>
+</section>
 </div>

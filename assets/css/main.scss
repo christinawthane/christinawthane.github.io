@@ -136,29 +136,43 @@ li p {
     padding-left: 0px;
 }
 
-.cancelled {
-    &::before {
-        content: "Cancelled";
-        text-decoration: none;
-        font-variant: small-caps;
-        font-weight: bold;
-        // Needed to prevent text-decoration from bleeding through
-        display: inline-block;
-        margin-right: 1em;
-    }
-    color: red;
-    text-decoration: line-through;
-
-    a {
-        color: red;
-    }
-}
-
 // For a responsive, centered image leading into a section
 .head-img {
     img {
         max-height: 250px;
     };
+}
+
+
+@mixin cancelled-blurb() {
+    content: "Cancelled";
+    text-decoration: none;
+    font-variant: small-caps;
+    font-weight: bold;
+    // Needed to prevent text-decoration from bleeding through
+    display: inline-block;
+}
+.cancelled {
+    &.signingtimeclass {
+        &::before {
+            @include cancelled-blurb();
+            margin-right: 1em;
+        }
+        color: #ccc;
+        text-decoration: line-through;
+
+        a {
+            color: #ccc;
+        }
+    }
+    &.event {
+        color: #ccc;
+        .event-title::after {
+            @include cancelled-blurb();
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+    }
 }
 
 .eventselect {
@@ -167,17 +181,15 @@ li p {
             text-decoration: line-through;
         }
         &::after {
-            content: "CANCELLED";
-            text-decoration: none;
-            margin-left: 1rem;
+            @include cancelled-blurb();
+            margin-left: 1em;
         }
     }
     option:disabled {
         text-decoration: line-through;
         &::after {
-            content: "CANCELLED";
-            text-decoration: none;
-            margin-left: 1rem;
+            @include cancelled-blurb();
+            margin-left: 1em;
         }
     }
 }

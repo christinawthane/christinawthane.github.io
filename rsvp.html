@@ -17,13 +17,14 @@ extrajs:
 Registration is currently closed. Please check back later for additional course dates.
 {%- else -%}
 
-<form method="post" action="https://formspree.io/formspree@lilybee.ch">
+<form method="post" id="rsvpForm" action="https://formspree.io/formspree@lilybee.ch">
     <section class="jumbotron">
         <h1>RSVP</h1>
         <p class="lead">Thanks for replying!</p>
 
-        <div id="eventSelect" class="form-group eventselect">
-            <select class="selectpicker" data-width="auto" id="eventSelect" title="Choose event...">
+        <div id="eventSelect" class="form-group eventselect col">
+            <select class="selectpicker form-control" name="event" required
+            form="rsvpForm" label="event" title="Choose event...">
             {% for eventtype in eventtypes %}
                 {% capture eventtypelabel -%}
                     {{ site.data.classinfo[eventtype].name }}
@@ -31,18 +32,10 @@ Registration is currently closed. Please check back later for additional course 
                 <optgroup label="{{ eventtypelabel | default: eventtype }}">
                 {% assign classevents = sortedevents | where: "class", eventtype %}
                 {% for event in classevents %}
-                    {% comment %} Establish unique label {% endcomment %}
-                    {%- if event.label -%}
-                        {%- assign eventid = event.label-%}
-                    {%- else -%}
-                        {%- capture eventid -%}
-                            {%if event.title %}{{event.title}}. {% endif -%}
-                            {{event.date}}. {{event.time}}
-                        {%- endcapture -%}
-                    {%- endif -%}
+                    {%- capture eventid -%}{% include eventid.html %}{%- endcapture -%}
 
-                    <option value="{{eventid}}" {% if event.cancelled %}disabled{% endif %}>
-                        {{event.date | date: "%a %d %b %Y"}}, {{event.time}}. {{event.title}}
+                    <option id="{{eventid | slugify: "latin"}}" value="{{eventid | escape}}" {% if event.cancelled %}disabled{% endif %}>
+                        {{event.date | date: "%a %d %b %Y"}}, {{event.time}}. {{event.title | smartify}}
                     </option>
                 {% endfor %}
             {% endfor %}
@@ -53,13 +46,13 @@ Registration is currently closed. Please check back later for additional course 
         <div class="form-row form-group">
             <label for="parentnamefield" class="col-sm-2 col-form-label">Parent Name</label>
             <div class="col-sm-10">
-                <input id="parentnamefield" type="text" class="form-control" placeholder="First Last" name="parentname"/>
+                <input id="parentnamefield" type="text" class="form-control" placeholder="First Last" name="parentname" required/>
             </div>
         </div>
         <div class="form-row form-group">
             <label for="emailfield" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-10">
-                <input id="emailfield" type="email" class="form-control" placeholder="Email" name="_replyto"/>
+                <input id="emailfield" type="email" class="form-control" placeholder="Email" name="_replyto" required/>
             </div>
         </div>
         <div class="form-row form-group">
@@ -134,16 +127,15 @@ Registration is currently closed. Please check back later for additional course 
                 <p>Thank you for replying! You will receive an invoice and confirmation via e-mail within 1-2 business days.</p>
             </div>
         </div>
-        <input type="hidden" name="formurl" value="{{page.url}}" />
         <div class="form-row">
             <div class="col">
               <button type="submit" class="btn btn-primary mb-2">RSVP</button>
             </div>
         </div>
     </section>
-    <input type="hidden" name="formurl" value="{{page.url}}" />
-    <input type="hidden" name="_next" value="{{baseurl}}{% link signingtime/submitted.md %}" />
-    <input type="hidden" name="_subject" value="Signing Time Registration" />
+    <input type="hidden" name="formurl" value="{{page.url | absolute_url }}" />
+    <input type="hidden" name="_next" value="{{ "thanks.html" | absolute_url }}" />
+    <input type="hidden" name="_subject" value="LilyBee Registration" />
 
 </form>
 
@@ -151,7 +143,29 @@ Registration is currently closed. Please check back later for additional course 
 
 // Wait for jQuery to load
 document.addEventListener('DOMContentLoaded', () => {
+    function eventChanged() {
+        // Somewhat roundabout way to get the slug for the selected event
+        var newVal = $('.selectpicker').val();
+        var slug = $('#eventSelect option').filter((i,x) => {return x.value == newVal}).attr('id');
+        // Update page
+        $('#rsvpForm input[name="_next"]').val("{{ "thanks.html" | absolute_url }}?" + slug);
+    }
+    $(".selectpicker").on('change', eventChanged);
+
+    // Update formurl
+    $('#rsvpForm input[name="formurl"]').val(document.location.href)
+
+    // Set initial event based on URL
+    var search = document.location.search;
+    if( search ) {
+        $('#rsvpForm input[name="_next"]').val("{{ "thanks.html" | absolute_url }}" + document.location.search)
+
+        // update course dropdown based on query
+        var optionId = search.replace('?','#');
+        $('.selectpicker').selectpicker('val', $(optionId).val());
+    }
     //$("#eventSelect").hide();
+
 });
 
 </script>

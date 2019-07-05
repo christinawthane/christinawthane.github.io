@@ -1,32 +1,19 @@
----
-title: Upcoming events
-layout: card
-permalink: /events/
-scrollspy: navbar
-scrollspy_offset: 56
-usebootstrapjs: true
-usefontawesome: true
-extrajs:
-  - https://kit.fontawesome.com/74d48ab92a.js
----
-<h1>Upcoming events</h1>
+{% comment %}
+List of all events
 
-<style>
-.thumbnail {
-    width:75px;
-    height:75px;
-    background:#6EC038;
-    display: inline-block;
-}
-</style>
+@param expandbutton Include the 'Expand All' control?
+{% endcomment -%}
+{%- if include.expandbutton == nil or include.expandbutton -%}
 <button type="button" class="btn btn-default btn-sm float-right" id="expandall">Expand All</button>
+{%- endif -%}
 <ul class="collapsible-events">
 {% assign events = site.data.events | sort: "date" %}
 {% for event in events %}
-{% assign uid = event.date | append: event.title | append: event.time | slugify: "latin" %}
+{% capture eventid %}{% include eventid.html %}{% endcapture -%}
+{% assign uid = eventid | slugify: "latin" %}
 <li class="event{% if event.cancelled %} cancelled{% endif %}">
     <div class="event-head">
-        <div class="border d-inline-block mr-3 rounded">
+        <div class="border mr-3 rounded d-none d-sm-inline-block">
             <img src="{{ event.image }}" class="event-thumbnail p-1 rounded" alt="thumbnail"/>
         </div>
         <div class="stacked-date">
@@ -40,8 +27,8 @@ extrajs:
            aria-expanded="false" aria-controls="event1" aria-label="Expand">
         </a>
         <div class="event-rsvp">
-            <button class="btn btn-primary{% if event.cancelled %} disabled{% endif %}"
-                type="button" >RSVP</button>
+            <a class="btn btn-primary{% if event.cancelled %} disabled{% endif %}"
+             href="/rsvp/?{{uid}}">RSVP</a>
         </div>
     </div>
     <div id="event-{{uid}}" class="event-body collapse">

@@ -1,0 +1,11 @@
+
+{%- comment -%}
+Establish unique label for an event
+
+@param event
+{%- endcomment -%}
+{%- if include.event.label -%}
+    {{event.label}}
+{%- else -%}
+{{event.date}} {{event.time}} {{event.title}}
+{%- endif -%}
