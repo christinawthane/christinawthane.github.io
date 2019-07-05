@@ -55,6 +55,10 @@ markdown: kramdown
 github: [metadata]
 #repository: "sbliven.github.io/christinawthane.github.io"
 
+sass:
+  style: compact # possible values: nested expanded compact compressed
+  sass_dir: _sass
+
 #theme: minima
 plugins:
   - jekyll-feed

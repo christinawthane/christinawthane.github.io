@@ -1,6 +1,7 @@
 ---
 # SASS stylesheet
 ---
+@import "mixins";
 
 // Logo colors:
 $logo-purple   : #6c2085;
@@ -17,6 +18,7 @@ $bst-navy: #00095e;
 $bg-yellow: #ffde2d; // a strong yellow color
 
 $hpsection-background : #5c1c72;
+
 
 body {
     background: $logo-purple;
@@ -109,12 +111,7 @@ a {
     display: inline-block;
     position: relative;
     &::before {
-        content: "";
-        width: 0px;
-        height: 0px;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-        border-left: 8px solid #727272;
+        @include arrow-right(#727272, 8px);
         position: absolute;
         top: calc(50% - 8px);
         left: .75rem;
@@ -253,9 +250,7 @@ li p {
                 color: #ccc;
 
                 &::before {
-                    content: "\f0d7"; //"\f0d8"
-                    font-family: FontAwesome;
-                    font-weight: 900;
+                    @include arrow-down();
                 }
                 &:hover {
                     text-decoration: inherit;
@@ -263,7 +258,7 @@ li p {
                 }
 
                 &.expanded::before {
-                    content: "\f0d8";
+                    @include arrow-up();
                     color: $bst-blue;
                 }
                 &.expanded:hover {
