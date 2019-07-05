@@ -101,7 +101,7 @@ Spring registration is open now for children 4 years old or younger and their pa
                     {%- endcapture -%}
                 {%- endif -%}
                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="coursetime" id="{{classid|slugify}}_radio" value="{{classid}}">
+                    <input class="form-check-input" type="radio" name="coursetime" id="{{classid|slugify}}_radio" value="{{classid | append:". " | append: class.location}}">
                     <label class="form-check-label" for="{{classid|slugify}}_radio">
                     {% if class.title %}<b>{{class.title}}</b>. {% endif -%}
                     {{class.dayofweek}} at {{class.time}} on {{class.alldates}}.

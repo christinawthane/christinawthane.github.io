@@ -35,7 +35,7 @@ Registration is currently closed. Please check back later for additional course 
                 {% for event in classevents %}
                     {%- capture eventid -%}{% include eventid.html %}{%- endcapture -%}
 
-                    <option id="{{eventid | slugify: "latin"}}" value="{{eventid | escape}}" {% if event.cancelled %}disabled{% endif %}>
+                    <option id="{{eventid | slugify: "latin"}}" value="{{eventid | append:". " | append: event.location | escape}}" {% if event.cancelled %}disabled{% endif %}>
                         {{event.date | date: "%a %d %b %Y"}}, {{event.time}}. {{event.title | smartify}}
                     </option>
                 {% endfor %}
