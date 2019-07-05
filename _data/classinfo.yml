@@ -1,0 +1,15 @@
+# General information about each class type
+#
+# name: Title to display for this class
+signingtime:
+  name: Signing Time!
+  price:
+    first: 110
+    additional: 25
+    extras: "Includes DVD!"
+
+signandplay:
+  name: Sign and Play
+  price:
+    first: 25
+    extras: "Coffee and snacks included"

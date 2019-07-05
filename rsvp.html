@@ -1,0 +1,174 @@
+---
+title: RSVP # Page title and menu item
+slug: rsvp  # last part of URL
+permalink: /rsvp/
+layout: card
+extracss:
+    - /assets/css/bootstrap-select.css
+extrajs:
+    - /assets/js/bootstrap-select/bootstrap-select.min.js
+---
+
+{%- assign events = site.data.events -%}
+{%- assign sortedevents = events | sort: "date" -%}
+{%- assign numevents = events | size -%}
+{%- assign eventtypes = events | map: "class" | uniq -%}
+
+{%- if numevents <= 0 %}
+Registration is currently closed. Please check back later for additional course dates.
+{%- else -%}
+
+<form method="post" id="rsvpForm" action="https://formspree.io/formspree@lilybee.ch">
+    <section class="jumbotron">
+        <h1>RSVP</h1>
+        <p class="lead">Thanks for replying!</p>
+
+        <div id="eventSelect" class="form-group eventselect col">
+            <select class="selectpicker form-control" name="event" required
+            form="rsvpForm" label="event" title="Choose event...">
+            {% for eventtype in eventtypes %}
+                {% capture eventtypelabel -%}
+                    {{ site.data.classinfo[eventtype].name }}
+                {%- endcapture %}
+                <optgroup label="{{ eventtypelabel | default: eventtype }}">
+                {% assign classevents = sortedevents | where: "class", eventtype %}
+                {% for event in classevents %}
+                    {%- capture eventid -%}{% include eventid.html %}{%- endcapture -%}
+
+                    <option id="{{eventid | slugify: "latin"}}" value="{{eventid | append:". " | append: event.location | escape}}" {% if event.cancelled %}disabled{% endif %}>
+                        {{event.date | date: "%a %d %b %Y"}}, {{event.time}}. {{event.title | smartify}}
+                    </option>
+                {% endfor %}
+            {% endfor %}
+            </select>
+        </div>
+    </section>
+    <section>
+        <div class="form-row form-group">
+            <label for="parentnamefield" class="col-sm-2 col-form-label">Parent Name</label>
+            <div class="col-sm-10">
+                <input id="parentnamefield" type="text" class="form-control" placeholder="First Last" name="parentname" required/>
+            </div>
+        </div>
+        <div class="form-row form-group">
+            <label for="emailfield" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input id="emailfield" type="email" class="form-control" placeholder="Email" name="_replyto" required/>
+            </div>
+        </div>
+        <div class="form-row form-group">
+            <label for="phonefield" class="col-sm-2 col-form-label">Phone number</label>
+            <div class="col-sm-10">
+                <input id="phonefield" type="text" class="form-control" placeholder="Phone number" name="phone"/>
+                {% comment %}
+                <div class="row">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Prefer SMS
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Prefer WhatsApp
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                {% endcomment %}
+            </div>
+        </div>
+        <div class="form-row form-group">
+            <label for="child1namefield" class="col-sm-2 col-form-label">Child 1 Name</label>
+            <div class="col-sm-4">
+                <input id="child1namefield" type="text" class="form-control" placeholder="Name" name="child1name"/>
+            </div>
+            <label for="child1birthdayfield" class="col-sm-2 col-form-label">Birthday</label>
+            <div class="col-sm-4">
+                <input id="child1birthdayfield" type="text" class="form-control" placeholder="DD-MM-YYYY" name="child1birthday"/>
+            </div>
+        </div>
+        <div class="form-row form-group">
+            <label for="child2namefield" class="col-sm-2 col-form-label">Child 2 Name</label>
+            <div class="col-sm-4">
+                <input id="child2namefield" type="text" class="form-control" placeholder="Name" name="child2name"/>
+            </div>
+            <label for="child2birthdayfield" class="col-sm-2 col-form-label">Birthday</label>
+            <div class="col-sm-4">
+                <input id="child2birthdayfield" type="text" class="form-control" placeholder="DD-MM-YYYY" name="child2birthday"/>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-10 offset-sm-2">
+                <p class="small">For more than two children, please indicate names and birthdays in the 'Additional Comments' below.</p>
+            </div>
+        </div>
+        <div class="form-row form-group">
+            <label for="paymentmethodselect" class="col-sm-2 col-form-label">Payment method</label>
+            <select class="selectpicker col-sm-10 offset-sm-2" data-width="auto" id="paymentmethodselect" title="Choose...">
+                <option value="Bank Transfer">Bank Transfer</option>
+                <option value="Cash">Cash</option>
+            </select>
+        </div>
+        <div class="form-row form-group">
+            <label for="additionalcomments" class="col-sm-2 col-form-label">Additional Comments</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" name="additionalcomments" id="additionalcomments"
+                    placeholder="Comments, special needs, additional notes, ..." rows="2"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <p>Thank you for replying! You will receive an invoice and confirmation via e-mail within 1-2 business days.</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+              <button type="submit" class="btn btn-primary mb-2">RSVP</button>
+            </div>
+        </div>
+    </section>
+    <input type="hidden" name="formurl" value="{{page.url | absolute_url }}" />
+    <input type="hidden" name="_next" value="{{ "thanks.html" | absolute_url }}" />
+    <input type="hidden" name="_subject" value="LilyBee Registration" />
+
+</form>
+
+<script>
+
+// Wait for jQuery to load
+document.addEventListener('DOMContentLoaded', () => {
+    function eventChanged() {
+        // Somewhat roundabout way to get the slug for the selected event
+        var newVal = $('.selectpicker').val();
+        var slug = $('#eventSelect option').filter((i,x) => {return x.value == newVal}).attr('id');
+        // Update page
+        $('#rsvpForm input[name="_next"]').val("{{ "thanks.html" | absolute_url }}?" + slug);
+    }
+    $(".selectpicker").on('change', eventChanged);
+
+    // Update formurl
+    $('#rsvpForm input[name="formurl"]').val(document.location.href)
+
+    // Set initial event based on URL
+    var search = document.location.search;
+    if( search ) {
+        $('#rsvpForm input[name="_next"]').val("{{ "thanks.html" | absolute_url }}" + document.location.search)
+
+        // update course dropdown based on query
+        var optionId = search.replace('?','#');
+        $('.selectpicker').selectpicker('val', $(optionId).val());
+    }
+    //$("#eventSelect").hide();
+
+});
+
+</script>
+
+{% endif %}

@@ -2,7 +2,7 @@
 title: Course # Page title and menu item
 slug: Course  # last part of URL
 ---
-{%- assign classes = site.data.classes | where:"class", "signingtime" -%}
+{%- assign classes = site.data.events | where:"class", "signingtime" -%}
 {%- assign numclasses = classes | size -%}
 <div class="row">
     <div class="col-lg-8 col-md-6" markdown="1">
@@ -19,11 +19,9 @@ The course runs 4 weeks and is offered at both [Hebammenpraxis Zurich]({{site.ba
 {% if numclasses > 0 %}
 Upcoming classes:
 
-{% for class in site.data.classes %}
-- {% if class.cancelled -%}
-    {: .cancelled}
-  {%- endif -%}
-  {%- if class.title %}**{{class.title}}.** {% endif %}{{class.dayofweek}} at {{class.time}} on {{class.dates}}.
+{% for class in classes %}
+- {: .signingtimeclass {% if class.cancelled -%}.cancelled{%- endif -%}}
+  {%- if class.title %}**{{class.title}}.** {% endif %}{{class.dayofweek}} at {{class.time}} on {{class.alldates}}.
 {%- case class.location -%}
     {%- when "gutbetucht" %} [Gut Betucht]({{site.baseurl}}{% link map.md %}#gutbetucht)
     {%- when "hebammenpraxis" %} [Hebammenpraxis Zurich]({{site.baseurl}}{% link map.md %}#hebammenpraxis)

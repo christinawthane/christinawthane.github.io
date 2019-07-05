@@ -3,7 +3,7 @@ title: Registration # Page title and menu item
 slug: registration  # last part of URL
 layout: card
 ---
-{%- assign classes = site.data.classes | where:"class", "signingtime" -%}
+{%- assign classes = site.data.events | where:"class", "signingtime" -%}
 {%- assign numclasses = classes | size -%}
 
 {%- if numclasses <= 0 %}
@@ -101,10 +101,10 @@ Spring registration is open now for children 4 years old or younger and their pa
                     {%- endcapture -%}
                 {%- endif -%}
                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="coursetime" id="{{classid|slugify}}_radio" value="{{classid}}">
+                    <input class="form-check-input" type="radio" name="coursetime" id="{{classid|slugify}}_radio" value="{{classid | append:". " | append: class.location}}">
                     <label class="form-check-label" for="{{classid|slugify}}_radio">
                     {% if class.title %}<b>{{class.title}}</b>. {% endif -%}
-                    {{class.dayofweek}} at {{class.time}} on {{class.dates}}.
+                    {{class.dayofweek}} at {{class.time}} on {{class.alldates}}.
 {%- case class.location -%}
     {%- when "hebammenpraxis" %} <a href="{{site.baseurl}}{% link map.md %}#gutbetucht">Gut Betucht</a>
     {%- when "gutbetucht" %} <a href="{{site.baseurl}}{% link map.md %}#hebammenpraxis">Hebammenpraxis Zurich</a>

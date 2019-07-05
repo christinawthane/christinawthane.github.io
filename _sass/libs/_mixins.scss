@@ -1,7 +1,0 @@
-@mixin blurit($size) {
-    filter: blur($size);
-    -webkit-filter: blur($size);
-    -moz-filter: blur($size);
-    -o-filter: blur($size);
-    -ms-filter: blur($size);
-}

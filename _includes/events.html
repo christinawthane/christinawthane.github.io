@@ -1,0 +1,96 @@
+{% comment %}
+List of all events
+
+@param expandbutton Include the 'Expand All' control?
+@param class Show only events in this class
+{% endcomment -%}
+{%- if include.expandbutton == nil or include.expandbutton -%}
+<button type="button" class="btn btn-light btn-sm float-right" id="expandall">Expand All</button>
+{%- endif -%}
+<ul class="collapsible-events">
+{% if include.class %}
+    <!-- Filtering events where class: {{include.class}} -->
+    {% assign events = site.data.events | where:"class",include.class | sort: "date" %}
+{% else %}
+    <!-- Showing all events -->
+    {% assign events = site.data.events | sort: "date" %}
+{% endif -%}
+{% for event in events %}
+{% capture eventid %}{% include eventid.html %}{% endcapture -%}
+{% assign uid = eventid | slugify: "latin" %}
+<li class="event{% if event.cancelled %} cancelled{% endif %}">
+    <div class="event-head">
+        <div class="border mr-3 rounded d-none d-sm-inline-block">
+            <img src="{{ event.image }}" class="event-thumbnail p-1 rounded" alt="thumbnail"/>
+        </div>
+        <div class="stacked-date">
+            <div class="dayofweek">{{ event.date | date: "%a" }}</div>
+            <div class="dayofmonth">{{ event.date | date: "%d" }}</div>
+            <div class="month">{{ event.date | date: "%b" }}</div>
+        </div>
+        <h5 class="event-title">{{ event.title | smartify }}</h5>
+        <span class="event-time">{{ event.time }}</span>
+        <a class="collapse-caret" data-toggle="collapse" href="#event-{{uid}}"
+           aria-expanded="false" aria-controls="event1" aria-label="Expand">
+        </a>
+        <div class="event-rsvp">
+            <a class="btn btn-primary{% if event.cancelled %} disabled{% endif %}"
+             href="/rsvp/?{{uid}}">RSVP</a>
+        </div>
+    </div>
+    <div id="event-{{uid}}" class="event-body collapse">
+        <p><b>Location:</b>
+            {%- case event.location -%}
+                {%- when "hebammenpraxis" %} <a href="{{site.baseurl}}{% link map.md %}#gutbetucht">Gut Betucht</a>
+                {%- when "gutbetucht" %} <a href="{{site.baseurl}}{% link map.md %}#hebammenpraxis">Hebammenpraxis Zurich</a>
+                {%- when "lilybee" %} <a href="{{site.baseurl}}{% link map.md %}#lilybee">LilyBee</a>
+                {%- else %} <a href="{{site.baseurl}}{% link map.md %}">{{event.location | capitalize}}</a>
+            {%- endcase %}
+        </p>
+        <p><b>Time:</b> {{ event.time }}</p>
+        {% if event.alldates != nil %}
+        <p><b>Dates:</b> {{ event.alldates }}</p>
+        {% endif %}
+        <p><b>Price:</b> {{ event.price}} CHF{{ event.price_extras }}</p>
+        <div class="event-description" markdown="1">{{ event.description }}
+{% if event.more != nil -%}{% unless page.url contains event.more -%}
+<a href="{{event.more}}" class="event-more">More Info...</a>
+{% endunless %}{%- endif %}
+</div> {% comment %} must be unindented due to markdown=1 rule {% endcomment %}
+    </div>
+</li>
+{% endfor %}
+</ul>
+
+<script>
+// Hook to update caret CSS when events are expanded/collapsed
+document.addEventListener('DOMContentLoaded', () => {
+    function setCaret(evt) {
+        var data = $(evt.target).data('bs.collapse');
+        var shown = evt.type.includes("show");
+        if( shown ) {
+            $(data._triggerArray).addClass("expanded");
+        } else {
+            $(data._triggerArray).removeClass("expanded");
+        }
+        console.log("triggered by "+evt.target.id);
+        console.log("Shown: "+shown)
+    }
+    $('.event-body').on('shown.bs.collapse', setCaret)
+    $('.event-body').on('hidden.bs.collapse', setCaret)
+
+
+    $("#expandall").on('click', (evt) => {
+        console.log("Expand all");
+        var $btn = $(evt.currentTarget)
+        if( $btn.text().includes("Collapse")) {
+            $(".event-body").collapse("hide");
+            $btn.text("Expand All");
+        } else {
+            $(".event-body").collapse("show");
+            $btn.text("Collapse All");
+        }
+
+    });
+});
+</script>

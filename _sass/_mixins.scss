@@ -1,0 +1,38 @@
+@mixin blurit($size) {
+    filter: blur($size);
+    -webkit-filter: blur($size);
+    -moz-filter: blur($size);
+    -o-filter: blur($size);
+    -ms-filter: blur($size);
+}
+
+// arrow base mixin. Override colors and remove the border from the pointy side
+@mixin arrow($size: .3em) {
+    content: "";
+    width: 0;
+    height: 0;
+    display: inline-block;
+
+    border: $size solid transparent;
+}
+
+@mixin arrow-up($color: inherit, $size: .3em) {
+    @include arrow($size);
+    border-top: 0;
+    border-bottom-color: $color;
+}
+@mixin arrow-down($color: inherit, $size: .3em) {
+    @include arrow($size);
+    border-bottom: 0;
+    border-top-color: $color;
+}
+@mixin arrow-right($color: inherit, $size: .3em) {
+    @include arrow($size);
+    border-right: 0;
+    border-left-color: $color;
+}
+@mixin arrow-left($color: inherit, $size: .3em) {
+    @include arrow($size);
+    border-left: 0;
+    border-right-color: $color;
+}
