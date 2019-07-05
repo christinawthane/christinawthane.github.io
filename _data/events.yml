@@ -27,7 +27,7 @@
 
 - class: signingtime
   title: Baby Signing Time 1
-  image: /images/magdalena-smolnicka-1409752-unsplash-300x300.jpg
+  image: /images/events/bst1.jpg
   dayofweek: Tuesdays
   time: 10:00-10:50
   date: 2019-06-25
@@ -47,7 +47,7 @@
 
 - class: signingtime
   title: Baby Signing Time 2
-  image: /images/magdalena-smolnicka-1409752-unsplash-300x300.jpg
+  image: /images/events/bst2.jpg
   dayofweek: Tuesdays
   time: 14:00-14:50
   date: 2019-09-03
@@ -66,7 +66,7 @@
 
 - class: signingtime
   title: Baby Signing Time 1
-  image: /images/magdalena-smolnicka-1409752-unsplash-300x300.jpg
+  image: /images/events/bst1.jpg
   dayofweek: Fridays
   time: 10:00-10:50
   date: 2019-09-06
@@ -89,7 +89,7 @@
 
 - class: signandplay
   title: 'Sign & Play: "4th of July/USA"'
-  image: /images/andrew-rice-433435-unsplash-300x300.jpg
+  image: /images/events/sp-usa.jpg
   time: 10:30-12:00
   date: 2019-07-04
   location: lilybee
@@ -105,7 +105,7 @@
 
 - class: signandplay
   title: 'Sign & Play: "Zoo"'
-  image: /images/andrew-rice-433435-unsplash-300x300.jpg
+  image: /images/events/sp-zoo.jpg
   time: 14:00-15:30
   date: 2019-07-12
   location: lilybee
@@ -130,7 +130,7 @@
 - class: signandplay
   title: Zoo Outing
   label: 2019-07-13-zoo
-  image: /images/andrew-rice-433435-unsplash-300x300.jpg
+  image: /images/events/sp-elephant.jpg
   time: 9:00-11:30
   date: 2019-07-13
   location: Zurich Zoo
@@ -149,7 +149,7 @@
 
 - class: signandplay
   title: 'Sign & Play: "Travel"'
-  image: /images/andrew-rice-433435-unsplash-300x300.jpg
+  image: /images/events/sp-travel.jpg
   time: 15:00-16:30
   date: 2019-07-23
   location: lilybee
@@ -164,7 +164,7 @@
 
 - class: signandplay
   title: 'Sign & Play: "1st of August/Switzerland"'
-  image: /images/andrew-rice-433435-unsplash-300x300.jpg
+  image: /images/events/sp-switzerland.jpg
   time: 10:00-11:30
   date: 2019-07-30
   location: lilybee
@@ -188,7 +188,7 @@
 
 - class: signandplay
   title: 'Sign & Play: "Summer"'
-  image: /images/andrew-rice-433435-unsplash-300x300.jpg
+  image: /images/events/sp-summer.jpg
   time: 15:00-16:30
   date: 2019-08-13
   location: lilybee
@@ -211,7 +211,7 @@
 
 - class: signandplay
   title: 'Sign & Play: "Friends"'
-  image: /images/andrew-rice-433435-unsplash-300x300.jpg
+  image: /images/events/sp-friends.jpg
   time: 10:00-11:30
   date: 2019-08-20
   location: lilybee
@@ -235,7 +235,7 @@
 
 - class: signandplay
   title: 'Sign & Play: "Feelings"'
-  image: /images/andrew-rice-433435-unsplash-300x300.jpg
+  image: /images/events/sp-feelings.jpg
   time: 10:00-11:30
   date: 2019-08-26
   location: lilybee
