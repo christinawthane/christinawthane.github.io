@@ -23,7 +23,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   and physically beneficial for both baby and parent.
 #baseurl: "/christinawthane.github.io" # for testing
 baseurl: "" # the subpath of your site, e.g. /blog
-#url: "http://www.blivenbabywearing.ch" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.lilybee.ch" # Used for absolute links. Must be set manually since we use a custom domain name
 #twitter_username: jekyllrb
 #github_username:  jekyll
 timezone: Europe/Zurich
