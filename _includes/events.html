@@ -52,10 +52,11 @@ List of all events
         <p><b>Dates:</b> {{ event.alldates }}</p>
         {% endif %}
         <p><b>Price:</b> {{ event.price}} CHF{{ event.price_extras }}</p>
-        {{ event.description }}
-        {% if event.more != nil -%}
-        <a href="{{event.more}}" class="event-more">More Info...</a>
-        {%- endif %}
+        <div class="event-description" markdown="1">{{ event.description }}
+{% if event.more != nil -%}{% unless page.url contains event.more -%}
+<a href="{{event.more}}" class="event-more">More Info...</a>
+{% endunless %}{%- endif %}
+</div> {% comment %} must be unindented due to markdown=1 rule {% endcomment %}
     </div>
 </li>
 {% endfor %}

@@ -12,14 +12,23 @@
 # which class the person registered for. They need to be unique. Leaving it
 # blank gives a good default.
 #
+# Descriptions can contain markdown. Use two newlines to start a new paragraph.
+#
 # Properties:
-# - class: currently 'signingtime'. Included for other future class types
+# - class: Class name. 'signingtime' or 'signandplay'
 # - title: name of the class (optional)
-# - dayofweek: Plural day of the week (Tuesdays)
+# - dayofweek: Plural day of the week (Tuesdays), for recuring classes
 # - time: Time range
-# - dates: Date range
+# - date: date of first class
+# - alldates: human-formatted list of dates. (Temporary work-around; will be replaced by 'dates')
+# - dates: List of individual class dates. (Eventually will replace 'date' and 'alldates'; currently underused.)
+#          Lists should be indented two spaces followed by a hyphen.
 # - location: Either 'schwamendingen' or 'wipkingen'
+# - price: Price in CHF
+# - price_extras: additional string appended after the price
 # - label: label to include in submitted form to identify this class. If ommitted, generated from other info.
+# - description: class description
+# - more: link to page with more info (optional)
 # - cancelled: set to 'true' to mark the class as being cancelled
 
 
@@ -98,6 +107,7 @@
   description: >-
     Sign & Play is a chance for you and your child to learn something new and meet other moms in the area. Enjoy some coffee, snacks and conversation while the kids play. You can ask questions you may have about signs for words that you use frequently in your home. At each session we will have a 15-20 minute ‘lesson’ with songs and props to learn new signs to a given theme.
 
+
     This week’s theme is 4th of July/USA. We will cover words like America, fireworks, and freedom. Have suggestions for other words to this theme that you’d like to know? Let me know on [facebook](https://www.facebook.com/LilyBeeZurich/) or
     [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure they’re included!
   more: /signandplay
@@ -118,6 +128,7 @@
     words that you use frequently in your home. At each session we will have a
     15-20 minute ‘lesson’ with songs and props to learn new signs to a given
     theme.
+
 
     This week’s theme is Zoo. We will cover words like hippopotamus, penguin,
     and lion. Have suggestions for other words to this theme that you’d like to
@@ -158,6 +169,7 @@
   description: >-
     Sign & Play is a chance for you and your child to learn something new and meet other moms in the area. Enjoy some coffee, snacks and conversation while the kids play. You can ask questions you may have about signs for words that you use frequently in your home. At each session we will have a 15-20 minute ‘lesson’ with songs and props to learn new signs to a given theme.
 
+
     This week’s theme is travel. We will cover words like airplane, visit, and hotel. Have suggestions for other words to this theme that you’d like to know? Let me know on [facebook](https://www.facebook.com/LilyBeeZurich/) or
     [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure they’re included!
   more: /signandplay
@@ -177,6 +189,7 @@
     words that you use frequently in your home. At each session we will have a
     15-20 minute ‘lesson’ with songs and props to learn new signs to a given
     theme.
+
 
     This week’s theme is 1st of August/Switzerland. We will cover words like
     Switzerland, alps, and flag.
@@ -202,6 +215,7 @@
     15-20 minute ‘lesson’ with songs and props to learn new signs to a given
     theme.
 
+
     This week’s theme is summer. We will cover words like hot, ice cream, and swim.
     Have suggestions for other words to this theme that you’d like to know? Let
     me know on [facebook](https://www.facebook.com/LilyBeeZurich/) or
@@ -224,6 +238,7 @@
     words that you use frequently in your home. At each session we will have a
     15-20 minute ‘lesson’ with songs and props to learn new signs to a given
     theme.
+
 
     This week’s theme is friends. We will cover words like share, play, and laugh.
     Have suggestions for other words to this theme that you’d like to know? Let
@@ -248,6 +263,7 @@
     words that you use frequently in your home. At each session we will have a
     15-20 minute ‘lesson’ with songs and props to learn new signs to a given
     theme.
+
 
     This week’s theme is feelings. We will cover words like happy, angry, and sleepy.
     Have suggestions for other words to this theme that you’d like to know? Let
