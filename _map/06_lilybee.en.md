@@ -4,7 +4,7 @@ language: en
 key: lilybee
 ---
 
-Visit LilyBee's cozy office! [Sign and Play]({% link signandplay/index.html %}) courses and other events are held here.
+Visit LilyBee's cozy office! [Sign and Play]({% link signandplay/index.html %}) courses, consultations, and other events are held here.
 
 > LilyBee
 > Nordstrasse 313<br/>
