@@ -222,8 +222,7 @@
     [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure
     they’re included!
   more: /signandplay
-  cancelled: true
-
+  
 
 - class: signandplay
   title: 'Sign & Play: "Friends"'
@@ -248,12 +247,13 @@
     [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure
     they’re included!
   more: /signandplay
+  cancelled: true
 
 
 - class: signandplay
   title: 'Sign & Play: "Feelings"'
   image: /images/events/sp-feelings.jpg
-  time: 10:00-11:30
+  time: 14:00-15:30
   date: 2019-08-26
   location: lilybee
   price: 25
