@@ -258,6 +258,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-github-metadata
+  jekyll-redirect-from
   tzinfo-data
 
 BUNDLED WITH

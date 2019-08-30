@@ -37,11 +37,11 @@ Upcoming classes:
 - Adults: Free (with child)
 
 {% if numclasses > 0 -%}
-<a href="{{site.baseurl}}{% link signingtime/register.html %}" class="btn btn-primary mr-2" role="button">Register</a>
+<a href="{{site.baseurl}}{% link rsvp.html %}" class="btn btn-primary mr-2" role="button">RSVP</a>
 {%- endif -%}
 <a href="{{site.baseurl}}{% link contact.html %}" role="button" class="btn btn-primary">Request more information</a>
 
-Registration includes a DVD and download code for Baby Signing Time Episode 1 with Rachel Coleman!
+Registration includes a DVD for Baby Signing Time Episode 1 with Rachel Coleman!
 
 </div>
 <div class="col-lg-4 col-md-6">
