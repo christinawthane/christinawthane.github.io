@@ -106,8 +106,8 @@ Spring registration is open now for children 4 years old or younger and their pa
                     {% if class.title %}<b>{{class.title}}</b>. {% endif -%}
                     {{class.dayofweek}} at {{class.time}} on {{class.alldates}}.
 {%- case class.location -%}
-    {%- when "hebammenpraxis" %} <a href="{{site.baseurl}}{% link map.md %}#gutbetucht">Gut Betucht</a>
-    {%- when "gutbetucht" %} <a href="{{site.baseurl}}{% link map.md %}#hebammenpraxis">Hebammenpraxis Zurich</a>
+    {%- when "gutbetucht" %} <a href="{{site.baseurl}}{% link map.md %}#gutbetucht">Gut Betucht</a>
+    {%- when "hebammenpraxis" %} <a href="{{site.baseurl}}{% link map.md %}#hebammenpraxis">Hebammenpraxis Zurich</a>
     {%- when "lilybee" %} <a href="{{site.baseurl}}{% link map.md %}#lilybee">LilyBee</a>
     {%- else %} <a href="{{site.baseurl}}{% link map.md %}">{{class.location | capitalize}}</a>
 {%- endcase %}

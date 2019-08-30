@@ -41,8 +41,8 @@ List of all events
     <div id="event-{{uid}}" class="event-body collapse">
         <p><b>Location:</b>
             {%- case event.location -%}
-                {%- when "hebammenpraxis" %} <a href="{{site.baseurl}}{% link map.md %}#gutbetucht">Gut Betucht</a>
-                {%- when "gutbetucht" %} <a href="{{site.baseurl}}{% link map.md %}#hebammenpraxis">Hebammenpraxis Zurich</a>
+                {%- when "gutbetucht" %} <a href="{{site.baseurl}}{% link map.md %}#gutbetucht">Gut Betucht</a>
+                {%- when "hebammenpraxis" %} <a href="{{site.baseurl}}{% link map.md %}#hebammenpraxis">Hebammenpraxis Zurich</a>
                 {%- when "lilybee" %} <a href="{{site.baseurl}}{% link map.md %}#lilybee">LilyBee</a>
                 {%- else %} <a href="{{site.baseurl}}{% link map.md %}">{{event.location | capitalize}}</a>
             {%- endcase %}
