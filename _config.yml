@@ -65,6 +65,7 @@ plugins:
   - jekyll-sitemap
 #  - jekyll-analytics  # not in github-pages
   - jekyll-github-metadata
+  - jekyll-redirect-from
 
 # We don't use the jekyll-analytics plugin directly, but keep compatable configs
 jekyll_analytics:

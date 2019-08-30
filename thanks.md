@@ -1,6 +1,8 @@
 ---
 title: Registration received
 layout: card
+redirect_from:
+    - /signingtime/submitted.html
 ---
 <div class="text-center" markdown="1">
 
