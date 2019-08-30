@@ -15,21 +15,21 @@
 # Descriptions can contain markdown. Use two newlines to start a new paragraph.
 #
 # Properties:
-# - class: Class name. 'signingtime' or 'signandplay'
-# - title: name of the class (optional)
-# - dayofweek: Plural day of the week (Tuesdays), for recuring classes
-# - time: Time range
-# - date: date of first class
-# - alldates: human-formatted list of dates. (Temporary work-around; will be replaced by 'dates')
-# - dates: List of individual class dates. (Eventually will replace 'date' and 'alldates'; currently underused.)
+#  class: Class name. 'signingtime' or 'signandplay'
+#  title: name of the class (optional)
+#  dayofweek: Plural day of the week (Tuesdays), for recuring classes
+#  time: Time range
+#  date: date of first class
+#  alldates: human-formatted list of dates. (Temporary work-around; will be replaced by 'dates')
+#  dates: List of individual class dates. (Eventually will replace 'date' and 'alldates'; currently underused.)
 #          Lists should be indented two spaces followed by a hyphen.
-# - location: Either 'schwamendingen' or 'wipkingen'
-# - price: Price in CHF
-# - price_extras: additional string appended after the price
-# - label: label to include in submitted form to identify this class. If ommitted, generated from other info.
-# - description: class description
-# - more: link to page with more info (optional)
-# - cancelled: set to 'true' to mark the class as being cancelled
+#  location: Either 'schwamendingen' or 'wipkingen'
+#  price: Price in CHF
+#  price_extras: additional string appended after the price
+#  label: label to include in submitted form to identify this class. If ommitted, generated from other info.
+#  description: class description
+#  more: link to page with more info (optional)
+#  cancelled: set to 'true' to mark the class as being cancelled
 
 
 ## Signing Time classes
@@ -72,7 +72,7 @@
   description: >-
     Baby Signing Time (BST) 1 covers basic signs such as food and family that will be most useful at home. I recommend you take this class first. BST 2 covers signs that are probably less used, but still useful, such as clothes and transportation signs. I recommend you take this class after taking BST 1, but that is not required. If the scheduling works out better for you to take it in the opposite order, please feel free to do so.
   more: /signingtime
-  - cancelled: true
+  cancelled: true
 
 - class: signingtime
   title: Baby Signing Time 1
