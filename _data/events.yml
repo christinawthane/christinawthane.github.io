@@ -56,46 +56,6 @@
 - class: signingtime
   title: Baby Signing Time 1
   image: /images/events/bst1.jpg
-  dayofweek: Tuesdays
-  time: 10:00-10:50
-  date: 2019-06-25
-  alldates: June 25 & July 2, 9 & 16
-  dates:
-  - 2019-06-25
-  - 2019-07-02
-  - 2019-07-09
-  - 2019-07-16
-  location: gutbetucht
-  price: 110
-  price_extras: " (1st child) - Includes DVD!"
-  description: >-
-    Baby Signing Time (BST) 1 covers basic signs such as food and family that
-    will be most useful at home.
-  more: /signingtime
-
-- class: signingtime
-  title: Baby Signing Time 2
-  image: /images/events/bst2.jpg
-  dayofweek: Tuesdays
-  time: 14:00-14:50
-  date: 2019-09-03
-  alldates: September 3, 10, 17 & 24
-  dates:
-  - 2019-09-03
-  - 2019-09-10
-  - 2019-09-17
-  - 2019-09-24
-  location: hebammenpraxis
-  price: 110
-  price_extras: " (1st child) - Includes DVD!"
-  description: >-
-    Baby Signing Time (BST) 1 covers basic signs such as food and family that will be most useful at home. I recommend you take this class first. BST 2 covers signs that are probably less used, but still useful, such as clothes and transportation signs. I recommend you take this class after taking BST 1, but that is not required. If the scheduling works out better for you to take it in the opposite order, please feel free to do so.
-  more: /signingtime
-  cancelled: true
-
-- class: signingtime
-  title: Baby Signing Time 1
-  image: /images/events/bst1.jpg
   dayofweek: Fridays
   time: 10:00-10:50
   date: 2019-09-06
