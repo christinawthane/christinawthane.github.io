@@ -37,15 +37,15 @@
 - class: signingtime
   title: Baby Signing Time 2
   image: /images/events/bst1.jpg
-  dayofweek: Mondays
+  dayofweek: Fridays
   time: 10:00-10:50
-  date: 2019-10-8
-  alldates: October 8, 15, 22 & 29
+  date: 2019-10-11
+  alldates: October 11, 18, 25 & November 1
   dates:
-  - 2019-10-08
-  - 2019-10-15
-  - 2019-10-22
-  - 2019-10-29
+  - 2019-10-11
+  - 2019-10-18
+  - 2019-10-25
+  - 2019-11-01
   location: lilybee
   price: 110
   price_extras: " (1st child) - Includes DVD!"
