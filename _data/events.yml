@@ -52,6 +52,8 @@
   description: >-
     Baby Signing Time (BST) 2 covers more advanced signs such as bedtime, manners and transportation. BST 1 is not required to sign up for BST 2.
   more: /signingtime
+  cancelled: true
+
 
 - class: signingtime
   title: Baby Signing Time 1
