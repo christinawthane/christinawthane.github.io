@@ -34,226 +34,79 @@
 
 ## Signing Time classes
 
-- class: signingtime
-  title: Baby Signing Time 2
-  image: /images/events/bst1.jpg
-  dayofweek: Fridays
-  time: 10:00-10:50
-  date: 2019-10-11
-  alldates: October 11, 18, 25 & November 1
-  dates:
-  - 2019-10-11
-  - 2019-10-18
-  - 2019-10-25
-  - 2019-11-01
-  location: lilybee
-  price: 110
-  price_extras: " (1st child) - Includes DVD!"
+- class: notice
+  title: Maternity Leave - Summer 2020
+  image: /images/blivenbabywearing_logo_simple_grey.png
   description: >-
-    Baby Signing Time (BST) 2 covers more advanced signs such as bedtime, manners and transportation. BST 1 is not required to sign up for BST 2.
-  more: /signingtime
-  cancelled: true
+    Classes will be on hold until September 2020 due to the birth of my daughter.
+    Check [facebook](https://www.facebook.com/LilyBeeZurich/) and
+    [instagram](https://www.instagram.com/LilyBeeZurich/) for spontaneous events!
 
-
-- class: signingtime
-  title: Baby Signing Time 1
-  image: /images/events/bst1.jpg
-  dayofweek: Fridays
-  time: 10:00-10:50
-  date: 2019-09-06
-  alldates: September 6, 13, 20 & 27
-  dates:
-  - 2019-09-06
-  - 2019-09-13
-  - 2019-09-20
-  - 2019-09-27
-  location: gutbetucht
-  price: 110
-  price_extras: " (1st child) - Includes DVD!"
-  description: >-
-    Baby Signing Time (BST) 1 covers basic signs such as food and family that
-    will be most useful at home.
-  more: /signingtime
+#- class: signingtime
+#  title: Baby Signing Time 1
+#  image: /images/events/bst1.jpg
+#  dayofweek: Fridays
+#  time: 10:00-10:50
+#  date: 2019-09-06
+#  alldates: September 6, 13, 20 & 27
+#  dates:
+#  - 2019-09-06
+#  - 2019-09-13
+#  - 2019-09-20
+#  - 2019-09-27
+#  location: gutbetucht
+#  price: 110
+#  price_extras: " (1st child) - Includes DVD!"
+#  description: >-
+#    Baby Signing Time (BST) 1 covers basic signs such as food and family that
+#    will be most useful at home.
+#  more: /signingtime
 
 
 ## Sign and Play
 
-- class: signandplay
-  title: 'Sign & Play: "4th of July/USA"'
-  image: /images/events/sp-usa.jpg
-  time: 10:30-12:00
-  date: 2019-07-04
-  location: lilybee
-  price: 25
-  price_extras: " - Coffee and snacks included"
-  description: >-
-    Sign & Play is a chance for you and your child to learn something new and meet other moms in the area. Enjoy some coffee, snacks and conversation while the kids play. You can ask questions you may have about signs for words that you use frequently in your home. At each session we will have a 15-20 minute ‘lesson’ with songs and props to learn new signs to a given theme.
+# - class: signandplay
+#   title: 'Sign & Play: "4th of July/USA"'
+#   image: /images/events/sp-usa.jpg
+#   time: 10:30-12:00
+#   date: 2019-07-04
+#   location: lilybee
+#   price: 25
+#   price_extras: " - Coffee and snacks included"
+#   description: >-
+#     Sign & Play is a chance for you and your child to learn something new and meet other moms in the area. Enjoy some coffee, snacks and conversation while the kids play. You can ask questions you may have about signs for words that you use frequently in your home. At each session we will have a 15-20 minute ‘lesson’ with songs and props to learn new signs to a given theme.
 
 
-    This week’s theme is 4th of July/USA. We will cover words like America, fireworks, and freedom. Have suggestions for other words to this theme that you’d like to know? Let me know on [facebook](https://www.facebook.com/LilyBeeZurich/) or
-    [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure they’re included!
-  more: /signandplay
-  cancelled: true
+#     This week’s theme is 4th of July/USA. We will cover words like America, fireworks, and freedom. Have suggestions for other words to this theme that you’d like to know? Let me know on [facebook](https://www.facebook.com/LilyBeeZurich/) or
+#     [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure they’re included!
+#   more: /signandplay
+#   cancelled: true
 
-- class: signandplay
-  title: 'Sign & Play: "Zoo"'
-  image: /images/events/sp-zoo.jpg
-  time: 14:00-15:30
-  date: 2019-07-12
-  location: lilybee
-  price: 25
-  price_extras: " - Coffee and snacks included"
-  description: >-
-    Sign & Play is a chance for you and your child to learn something new and
-    meet other moms in the area. Enjoy some coffee, snacks and conversation
-    while the kids play. You can ask questions you may have about signs for
-    words that you use frequently in your home. At each session we will have a
-    15-20 minute ‘lesson’ with songs and props to learn new signs to a given
-    theme.
+#- class: slingwalk
+#  title: 'Sling Walk'
+#  image: /images/events/sp-feelings.jpg
+#  time: 9:30-11:00
+#  date: 2020-02-01
+#  location: Bucheggplatz, upper boardwalk by the elevator
+#  #price: 10
+#  description: >-
+#    Bundle up and put your baby in a sling or stroller and come for a walk with
+#    other moms and dads.  Bring your husbands and older kids, mine will be
+#    there. Or send your husband with the kids and put your feet up at home and
+#    have your coffee/tea while it's still hot! We'll meet at 9:30am every
+#    Saturday in February at Bucheggplatz and go for a walk that should take
+#    1-1.5 hours (depending on our littlest/slowest walkers). Looking forward to
+#    seeing you then!
+#
 
-
-    This week’s theme is Zoo. We will cover words like hippopotamus, penguin,
-    and lion. Have suggestions for other words to this theme that you’d like to
-    know? Let me know on [facebook](https://www.facebook.com/LilyBeeZurich/) or
-    [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure
-    they’re included! We will be going on an outing to the zoo the next day so
-    you can put your new knowledge to use and get a refresher.
-  more: /signandplay
-
-- class: signandplay
-  title: Zoo Outing
-  label: 2019-07-13-zoo
-  image: /images/events/sp-elephant.jpg
-  time: 9:00-11:30
-  date: 2019-07-13
-  location: Zurich Zoo
-  price: 0
-  description: >-
-    Join us on Saturday, July 13th for an outing to the Zürich Zoo to learn
-    signs for various zoo animals. This is a great chance to show your child the
-    sign right next to the real thing rather than just a picture. Please get
-    your own entrance ticket (there are no additional costs for this event) and
-    meet us by the (fake) penguins just inside the gates. We will make a loop
-    through the zoo and learn signs for the animals as we see them. Our Friday
-    Sign & Play session will be zoo themed, so if you would like to get some
-    practice ahead of time, join us then to learn some of the animal signs in
-    advance.
-  more: /signandplay
-
-- class: signandplay
-  title: 'Sign & Play: "Travel"'
-  image: /images/events/sp-travel.jpg
-  time: 15:00-16:30
-  date: 2019-07-23
-  location: lilybee
-  price: 25
-  price_extras: " - Coffee and snacks included"
-  description: >-
-    Sign & Play is a chance for you and your child to learn something new and meet other moms in the area. Enjoy some coffee, snacks and conversation while the kids play. You can ask questions you may have about signs for words that you use frequently in your home. At each session we will have a 15-20 minute ‘lesson’ with songs and props to learn new signs to a given theme.
-
-
-    This week’s theme is travel. We will cover words like airplane, visit, and hotel. Have suggestions for other words to this theme that you’d like to know? Let me know on [facebook](https://www.facebook.com/LilyBeeZurich/) or
-    [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure they’re included!
-  more: /signandplay
-
-- class: signandplay
-  title: 'Sign & Play: "1st of August/Switzerland"'
-  image: /images/events/sp-switzerland.jpg
-  time: 10:00-11:30
-  date: 2019-07-30
-  location: lilybee
-  price: 25
-  price_extras: " - Coffee and snacks included"
-  description: >-
-    Sign & Play is a chance for you and your child to learn something new and
-    meet other moms in the area. Enjoy some coffee, snacks and conversation
-    while the kids play. You can ask questions you may have about signs for
-    words that you use frequently in your home. At each session we will have a
-    15-20 minute ‘lesson’ with songs and props to learn new signs to a given
-    theme.
-
-
-    This week’s theme is 1st of August/Switzerland. We will cover words like
-    Switzerland, alps, and flag.
-    Have suggestions for other words to this theme that you’d like to know? Let
-    me know on [facebook](https://www.facebook.com/LilyBeeZurich/) or
-    [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure
-    they’re included!
-  more: /signandplay
-
-- class: signandplay
-  title: 'Sign & Play: "Summer"'
-  image: /images/events/sp-summer.jpg
-  time: 15:00-16:30
-  date: 2019-08-13
-  location: lilybee
-  price: 25
-  price_extras: " - Coffee and snacks included"
-  description: >-
-    Sign & Play is a chance for you and your child to learn something new and
-    meet other moms in the area. Enjoy some coffee, snacks and conversation
-    while the kids play. You can ask questions you may have about signs for
-    words that you use frequently in your home. At each session we will have a
-    15-20 minute ‘lesson’ with songs and props to learn new signs to a given
-    theme.
-
-
-    This week’s theme is summer. We will cover words like hot, ice cream, and swim.
-    Have suggestions for other words to this theme that you’d like to know? Let
-    me know on [facebook](https://www.facebook.com/LilyBeeZurich/) or
-    [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure
-    they’re included!
-  more: /signandplay
-  
-
-- class: signandplay
-  title: 'Sign & Play: "Friends"'
-  image: /images/events/sp-friends.jpg
-  time: 10:00-11:30
-  date: 2019-08-20
-  location: lilybee
-  price: 25
-  price_extras: " - Coffee and snacks included"
-  description: >-
-    Sign & Play is a chance for you and your child to learn something new and
-    meet other moms in the area. Enjoy some coffee, snacks and conversation
-    while the kids play. You can ask questions you may have about signs for
-    words that you use frequently in your home. At each session we will have a
-    15-20 minute ‘lesson’ with songs and props to learn new signs to a given
-    theme.
-
-
-    This week’s theme is friends. We will cover words like share, play, and laugh.
-    Have suggestions for other words to this theme that you’d like to know? Let
-    me know on [facebook](https://www.facebook.com/LilyBeeZurich/) or
-    [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure
-    they’re included!
-  more: /signandplay
-  cancelled: true
-
-
-- class: signandplay
-  title: 'Sign & Play: "Feelings"'
-  image: /images/events/sp-feelings.jpg
-  time: 14:00-15:30
-  date: 2019-08-26
-  location: lilybee
-  price: 25
-  price_extras: " - Coffee and snacks included"
-  description: >-
-    Sign & Play is a chance for you and your child to learn something new and
-    meet other moms in the area. Enjoy some coffee, snacks and conversation
-    while the kids play. You can ask questions you may have about signs for
-    words that you use frequently in your home. At each session we will have a
-    15-20 minute ‘lesson’ with songs and props to learn new signs to a given
-    theme.
-
-
-    This week’s theme is feelings. We will cover words like happy, angry, and sleepy.
-    Have suggestions for other words to this theme that you’d like to know? Let
-    me know on [facebook](https://www.facebook.com/LilyBeeZurich/) or
-    [instagram](https://www.instagram.com/LilyBeeZurich/) and I’ll make sure
-    they’re included!
-  more: /signandplay
-  cancelled: true
-
+# Sling Walks. Shared info set in classinfo.yml
+- class: slingwalk
+  date: 2020-02-01
+- class: slingwalk
+  date: 2020-02-08
+- class: slingwalk
+  date: 2020-02-15
+- class: slingwalk
+  date: 2020-02-22
+- class: slingwalk
+  date: 2020-02-29

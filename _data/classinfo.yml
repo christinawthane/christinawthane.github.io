@@ -1,15 +1,37 @@
 # General information about each class type
 #
-# name: Title to display for this class
+# This provides info for the RSVP page, as well as defaults for the events page
+#
+# title: Title to display for this class
 signingtime:
-  name: Signing Time!
+  title: Signing Time!
   price:
     first: 110
     additional: 25
     extras: "Includes DVD!"
 
 signandplay:
-  name: Sign and Play
+  title: Sign and Play
   price:
     first: 25
     extras: "Coffee and snacks included"
+
+slingwalk:
+  title: 'Sling Walk'
+  rsvp: false
+  image: /images/events/sp-feelings.jpg
+  time: 9:30-11:00
+  location: Bucheggplatz, up above by the elevator
+  price: Free
+  description: >-
+    Bundle up and put your baby in a sling or stroller and come for a walk with
+    other moms and dads.  Bring your husbands and older kids, mine will be
+    there. Or send your husband with the kids and put your feet up at home and
+    have your coffee/tea while it's still hot! We'll meet at 9:30am every
+    Saturday in February at Bucheggplatz and go for a walk that should take
+    1-1.5 hours (depending on our littlest/slowest walkers). Looking forward to
+    seeing you then!
+
+
+notice:
+  rsvp: false

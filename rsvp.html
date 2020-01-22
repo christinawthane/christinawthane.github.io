@@ -10,7 +10,6 @@ extracss:
 extrajs:
     - /assets/js/bootstrap-select/bootstrap-select.min.js
 ---
-
 {%- assign events = site.data.events -%}
 {%- assign sortedevents = events | sort: "date" -%}
 {%- assign numevents = events | size -%}
@@ -29,18 +28,20 @@ Registration is currently closed. Please check back later for additional course 
             <select class="selectpicker form-control" name="event" required
             form="rsvpForm" label="event" title="Choose event...">
             {% for eventtype in eventtypes %}
-                {% capture eventtypelabel -%}
-                    {{ site.data.classinfo[eventtype].name }}
-                {%- endcapture %}
-                <optgroup label="{{ eventtypelabel | default: eventtype }}">
-                {% assign classevents = sortedevents | where: "class", eventtype %}
-                {% for event in classevents %}
-                    {%- capture eventid -%}{% include eventid.html %}{%- endcapture -%}
+                {% unless site.data.classinfo[eventtype].rsvp == false %}
+                    {% capture eventtypelabel -%}
+                        {{ site.data.classinfo[eventtype].title }}
+                    {%- endcapture %}
+                    <optgroup label="{{ eventtypelabel | default: eventtype }}">
+                    {% assign classevents = sortedevents | where: "class", eventtype %}
+                    {% for event in classevents %}
+                        {%- capture eventid -%}{% include eventid.html %}{%- endcapture -%}
 
-                    <option id="{{eventid | slugify: "latin"}}" value="{{eventid | append:". " | append: event.location | escape}}" {% if event.cancelled %}disabled{% endif %}>
-                        {{event.date | date: "%a %d %b %Y"}}, {{event.time}}. {{event.title | smartify}}
-                    </option>
-                {% endfor %}
+                        <option id="{{eventid | slugify: "latin"}}" value="{{eventid | append:". " | append: event.location | escape}}" {% if event.cancelled %}disabled{% endif %}>
+                            {{event.date | date: "%a %d %b %Y"}}, {{event.time}}. {{event.title | smartify}}
+                        </option>
+                    {% endfor %}
+                {% endunless %}
             {% endfor %}
             </select>
         </div>
