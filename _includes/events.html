@@ -64,9 +64,16 @@ List of all events
         {% if event.alldates != nil or classdefaults.alldates != nil %}
         <p><b>Dates:</b> {{ event.alldates | default: classdefaults.alldates }}</p>
         {% endif %}
-        {% if event.price or classdefaults.price -%}
-            <p><b>Price:</b> {{ event.price | default: classdefaults.price }} CHF{{
-                event.price_extras | default: classdefaults.price_extras }}</p>
+        {% capture price %}{{ event.price | default: classdefaults.price }}{% endcapture -%}
+        {% assign price = price | plus: 0 -%}
+        {% if price -%}
+            <p><b>Price:</b>
+                {% if price > 0 -%}
+                    {{ price }} CHF
+                {%- else -%}
+                    Free
+                {%- endif -%}
+                {{ event.price_extras | default: classdefaults.price_extras }}</p>
         {% endif -%}
         <div class="event-description" markdown="1">{{ event.description | default: classdefaults.description }}
 {% capture more %}{{event.more | default classdefaults.more}}{% endcapture -%}
