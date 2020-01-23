@@ -17,11 +17,17 @@ signandplay:
     extras: "Coffee and snacks included"
 
 slingwalk:
-  title: 'Sling Walk'
+  title: >-
+    Sling Walk
+    |
+    <span class="de">Tragespaziergang</span>
   rsvp: false
   image: /images/events/sp-feelings.jpg
   time: 9:30-11:00
-  location: Bucheggplatz, up above by the elevator
+  location: >-
+    Bucheggplatz, up above by the elevator
+    |
+    <span class="de">Bucheggplatz, oben beim Lift</span>
   price: 0
   description: >-
     Bundle up and put your baby in a sling or stroller and come for a walk with
@@ -32,6 +38,25 @@ slingwalk:
     1-1.5 hours (depending on our littlest/slowest walkers). Looking forward to
     seeing you then!
 
+
+    Zieht euch warm an, packt das Baby in die Trage oder in den Buggy und kommt
+    mit uns spazieren. Papis und ältere Kinder sind willkommen, meine werden
+    auch dabei sein. Oder schickt die Männer mit den Kinder raus und ruht euch
+    zuhause aus und trinkt den Kaffe/Tee während er noch warm ist!
+
+    {: .de}
+
+
+    Wir treffen uns um halb zehn jeden Samstag im Februar beim Bucheggplatz. Der
+    Spaziergang dauert ca. 1-1.5h (wir nehmen Rücksicht auf die kürzesten
+    Beine).
+
+    {: .de}
+
+
+    Ich freue mich auf euch!
+
+    {: .de}
 
 notice:
   rsvp: false
