@@ -17,7 +17,7 @@
 # Properties:
 #  class: Class name. 'signingtime' or 'signandplay'
 #  title: name of the class (optional)
-#  dayofweek: Plural day of the week (Tuesdays), for recuring classes
+#  dayofweek: Plural day of the week (Tuesdays), for recurring classes
 #  time: Time range
 #  date: date of first class
 #  alldates: human-formatted list of dates. (Temporary work-around; will be replaced by 'dates')
@@ -27,7 +27,7 @@
 #  price: Price in CHF
 #  price_extras: additional string appended after the price
 #  label: label to include in submitted form to identify this class. If ommitted, generated from other info.
-#  description: class description
+#  description: class description. Accepts markdown, but newlines must be doubled.
 #  more: link to page with more info (optional)
 #  cancelled: set to 'true' to mark the class as being cancelled
 
@@ -41,6 +41,10 @@
     Classes will be on hold until September 2020 due to the birth of my daughter.
     Check [facebook](https://www.facebook.com/LilyBeeZurich/) and
     [instagram](https://www.instagram.com/LilyBeeZurich/) for spontaneous events!
+
+
+    Babywearing consultations continue to be available (with live model!). Please
+    request an appointment [here]({{site.baseurl}}{% link babywearing/index.html %}).
 
 #- class: signingtime
 #  title: Baby Signing Time 1
