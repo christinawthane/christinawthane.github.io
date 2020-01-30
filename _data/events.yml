@@ -106,6 +106,7 @@
 # Sling Walks. Shared info set in classinfo.yml
 - class: slingwalk
   date: 2020-02-01
+  cancelled: true
 - class: slingwalk
   date: 2020-02-08
 - class: slingwalk
