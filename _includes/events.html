@@ -18,11 +18,13 @@ List of all events
 <button type="button" class="btn btn-light btn-sm float-right" id="expandall">Expand All</button>
 {%- endif -%}
 <ul class="collapsible-events">
+
 {% for event in events %}
 {% assign classdefaults = site.data.classinfo[event.class] -%}
 {% capture eventid %}{% include eventid.html %}{% endcapture -%}
 {% assign uid = eventid | slugify: "latin" %}
-<li class="event{% if event.cancelled %} cancelled{% endif %}">
+{% capture expires %}{{ event.date | date: "%Y-%m-%d" }}{% endcapture %}
+<li class="event{% if event.cancelled %} cancelled{% endif %}" data-date="{{ expires }}">
     <div class="event-head">
         <div class="border mr-3 rounded d-none d-sm-inline-block">
             <img src="{{ event.image | default: classdefaults.image}}" class="event-thumbnail p-1 rounded" alt="thumbnail"/>
@@ -35,8 +37,7 @@ List of all events
         <h5 class="event-title">{{ event.title | default: classdefaults.title | smartify }}</h5>
         <span class="event-time">{{ event.time | default: classdefaults.time}}</span>
         <a class="collapse-caret" data-toggle="collapse" href="#event-{{uid}}"
-
-           aria-expanded="false" aria-controls="event1" aria-label="Expand">
+           aria-expanded="false" aria-controls="event-{{uid}}" aria-label="Expand">
         </a>
         {% unless event.rsvp == false or classdefaults.rsvp == false -%}
         <div class="event-rsvp">
@@ -85,7 +86,14 @@ List of all events
 </li>
 {% endfor %}
 </ul>
-
+<div id="past-events" class="past-events d-none" markdown="0">
+    <h4>Past events
+        <a class="collapse-caret" data-toggle="collapse" href="#past-events-list"
+            aria-expanded="false" aria-controls="past-events-list" aria-label="Expand">
+        </a>
+    </h4>
+    <ul id="past-events-list" class="collapsible-events collapse"></ul>
+</div>
 <script>
 // Hook to update caret CSS when events are expanded/collapsed
 document.addEventListener('DOMContentLoaded', () => {
@@ -97,12 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             $(data._triggerArray).removeClass("expanded");
         }
-        console.log("triggered by "+evt.target.id);
-        console.log("Shown: "+shown)
+        //console.log("triggered by "+evt.target.id);
+        //console.log("Shown: "+shown)
     }
     $('.event-body').on('shown.bs.collapse', setCaret)
     $('.event-body').on('hidden.bs.collapse', setCaret)
-
+    $('.past-events').on('shown.bs.collapse', setCaret)
+    $('.past-events').on('hidden.bs.collapse', setCaret)
 
     $("#expandall").on('click', (evt) => {
         console.log("Expand all");
@@ -116,6 +125,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     });
+
+    function hidePast() {
+        $past = $("#past-events-list");
+        $(".event").each(function() {
+            const $this = $(this),
+                evtDateStr = $this.attr("data-date");
+            const evtDate = new Date(evtDateStr); // local timezone
+            if( evtDate !== NaN) {
+                const yesterday = new Date();
+                yesterday.setDate(yesterday.getDate() - 1);
+
+                if(evtDate < yesterday) {
+                    $(".past-events").removeClass("d-none"); // unhide past
+                    $this.appendTo($past); // move below fold
+                    $this.addClass("old-event");
+                    const $rsvp = $this.find(".event-rsvp a");
+                    $rsvp.addClass("disabled");
+                    $rsvp.attr("aria-disabled","true");
+                }
+            }
+
+        })
+    }
+    hidePast();
 });
 </script>
 

@@ -247,32 +247,6 @@ li>p {
                 }
             }
 
-            .collapse-caret {
-                color: #ccc;
-
-                &::before {
-                    @include arrow-down();
-                }
-                &:hover {
-                    text-decoration: inherit;
-                    color: $bst-blue;
-                }
-
-                &.expanded::before {
-                    @include arrow-up();
-                    color: $bst-blue;
-                }
-                &.expanded:hover {
-                    text-decoration: inherit;
-                    color: #ccc;
-                }
-
-            }
-
-
-            .collapse-caret::before {
-                transition: font-size 0.5s ease;
-            }
             &:hover .collapse-caret::before {
                 font-size: 120%;
             }
@@ -287,4 +261,63 @@ li>p {
             }
         }
     }
+}
+
+.collapse-caret {
+    color: #ccc;
+
+    &::before {
+        @include arrow-down();
+    }
+    &:hover {
+        text-decoration: inherit;
+        color: $bst-blue;
+    }
+
+    &.expanded::before {
+        @include arrow-up();
+        color: $bst-blue;
+    }
+    &.expanded:hover {
+        text-decoration: inherit;
+        color: #ccc;
+    }
+
+}
+
+
+.collapse-caret::before {
+    transition: font-size 0.5s ease;
+}
+
+.past-events {
+        .collapse-caret {
+            color: #ccc;
+
+            &::before {
+                @include arrow-down();
+            }
+            &:hover {
+                text-decoration: inherit;
+                color: $bst-blue;
+            }
+
+            &.expanded::before {
+                @include arrow-up();
+                color: $bst-blue;
+            }
+            &.expanded:hover {
+                text-decoration: inherit;
+                color: #ccc;
+            }
+
+        }
+
+
+            .collapse-caret::before {
+                transition: font-size 0.5s ease;
+            }
+            &:hover .collapse-caret::before {
+                font-size: 120%;
+            }
 }
