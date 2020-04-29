@@ -47,13 +47,13 @@ layout: home
     <div class="card-deck mt-4">
         <div class="card text-center p-4">
             <div class="card-body">
-                <a href="https://www.facebook.com/LilyBeeZurich/"><div class="logo-72">
+                <a href="https://www.facebook.com/LilyBeeZurich/" target="_blank"><div class="logo-72">
                     <img src="{{site.baseurl}}{% link images/flogo_RGB_HEX-72.png %}" alt="Facebook" width="100%"/>
                 </div></a>
-                <a href="https://www.instagram.com/LilyBeeZurich/"><div class="p-2 logo-72" style="background:#FF0077; ">
+                <a href="https://www.instagram.com/LilyBeeZurich/" target="_blank"><div class="p-2 logo-72" style="background:#FF0077; ">
                     <img src="{{site.baseurl}}{% link images/glyph-logo_May2016_white.svg %}" alt="Instagram" width="100%"/>
                 </div></a>
-                <a href="https://LilyBeeZurich.etsy.com/"><div class="logo-72" style="background: #F56402;">
+                <a href="https://LilyBeeZurich.etsy.com/" target="_blank"><div class="logo-72" style="background: #F56402;">
                     <img src="{{site.baseurl}}{% link images/etsy-logo.svg %}" alt="Etsy" width="100%"/>
                 </div></a>
             </div>
