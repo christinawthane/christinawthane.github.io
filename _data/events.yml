@@ -34,37 +34,25 @@
 
 ## Signing Time classes
 
-- class: notice
-  title: Maternity Leave - Summer 2020
-  image: /images/blivenbabywearing_logo_simple_grey.png
+- class: signingtime
+  title: Baby Signing Time 1
+  image: /images/events/bst1.jpg
+  dayofweek: Fridays
+  time: 14:00-15:50
+  date: 2020-08-07
+  alldates: August 7, 14, 21 & 28
+  dates:
+  - 2020-08-07
+  - 2020-08-14
+  - 2020-08-21
+  - 2020-08-28
+  location: hebammenpraxis
+  price: 110
+  price_extras: " (1st child) - Includes DVD!"
   description: >-
-    Classes will be on hold until September 2020 due to the birth of my daughter.
-    Check [facebook](https://www.facebook.com/LilyBeeZurich/) and
-    [instagram](https://www.instagram.com/LilyBeeZurich/) for spontaneous events!
-
-
-    Babywearing consultations continue to be available (with live model!). Please
-    request an appointment [here]({{site.baseurl}}{% link babywearing/index.html %}).
-
-#- class: signingtime
-#  title: Baby Signing Time 1
-#  image: /images/events/bst1.jpg
-#  dayofweek: Fridays
-#  time: 10:00-10:50
-#  date: 2019-09-06
-#  alldates: September 6, 13, 20 & 27
-#  dates:
-#  - 2019-09-06
-#  - 2019-09-13
-#  - 2019-09-20
-#  - 2019-09-27
-#  location: gutbetucht
-#  price: 110
-#  price_extras: " (1st child) - Includes DVD!"
-#  description: >-
-#    Baby Signing Time (BST) 1 covers basic signs such as food and family that
-#    will be most useful at home.
-#  more: /signingtime
+    Baby Signing Time (BST) 1 covers basic signs such as food and family that
+    will be most useful at home.
+  more: /signingtime
 
 
 ## Sign and Play
@@ -104,11 +92,11 @@
 #
 
 # Sling Walks. Shared info set in classinfo.yml
-- class: slingwalk
-  date: 2020-02-08
-- class: slingwalk
-  date: 2020-02-15
-- class: slingwalk
-  date: 2020-02-22
-- class: slingwalk
-  date: 2020-02-29
+# - class: slingwalk
+#   date: 2020-02-08
+# - class: slingwalk
+#   date: 2020-02-15
+# - class: slingwalk
+#   date: 2020-02-22
+# - class: slingwalk
+#   date: 2020-02-29
