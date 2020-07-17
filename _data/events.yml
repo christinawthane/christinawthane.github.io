@@ -38,7 +38,7 @@
   title: Baby Signing Time 1
   image: /images/events/bst1.jpg
   dayofweek: Fridays
-  time: 14:00-15:50
+  time: 14:00-14:50
   date: 2020-08-07
   alldates: August 7, 14, 21 & 28
   dates:
@@ -52,6 +52,27 @@
   description: >-
     Baby Signing Time (BST) 1 covers basic signs such as food and family that
     will be most useful at home.
+  more: /signingtime
+
+- class: signingtime
+  title: Baby Signing Time 2
+  image: /images/events/bst2.jpg
+  dayofweek: Fridays
+  time: 14:00-15:50
+  date: 2020-09-04
+  alldates: September 4, 11, 18, & 25
+  dates:
+  - 2020-09-04
+  - 2020-09-11
+  - 2020-09-18
+  - 2020-09-25
+  location: hebammenpraxis
+  price: 110
+  price_extras: " (1st child) - Includes DVD!"
+  description: >-
+    Baby Signing Time (BST) 2 covers household signs such as clothes and
+    transportation. Signing Time classes may be taken in any order.
+
   more: /signingtime
 
 
