@@ -38,6 +38,8 @@ collections:
     #permalink: /en/:collection/:title/
   signandplay:
     output: false
+  bringingbabyhome:
+    output: false
   contact:
     output: false
 

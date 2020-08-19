@@ -151,7 +151,7 @@ li>p {
     display: inline-block;
 }
 .cancelled {
-    &.signingtimeclass {
+    &.signingtimeclass, &.course {
         &::before {
             @include cancelled-blurb();
             margin-right: 1em;
@@ -333,4 +333,10 @@ li>p {
     width:36px;
     height:36px;
     margin:4.5px;
+}
+
+.faq {
+    dt:before {
+        content: "Q. ";
+    }
 }

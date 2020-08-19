@@ -121,3 +121,15 @@
 #   date: 2020-02-22
 # - class: slingwalk
 #   date: 2020-02-29
+
+- class: bringingbabyhome
+  dayofweek: Saturday
+  time: 9:00-12:00
+  date: 2020-10-03
+  alldates: October 3, 17, 24 & 31
+  dates:
+  - 2020-09-03
+  - 2020-09-17
+  - 2020-09-24
+  - 2020-09-31
+  location: hebammenpraxis

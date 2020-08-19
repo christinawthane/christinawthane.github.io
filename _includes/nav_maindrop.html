@@ -9,7 +9,7 @@ Elements are pulled from _data/global_nav.html
 <ul class="nav nav-pills">
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle navbar-brand lilybee" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">LilyBee</a>
-        <div class="dropdown-menu">            
+        <div class="dropdown-menu">
             {% for pg in site.data.global_nav %}
             {% capture text -%}
                 {% if include.language == "en" %}
@@ -23,7 +23,8 @@ Elements are pulled from _data/global_nav.html
                 {% endif %}
             {% endcapture %}
             <a class="dropdown-item
-                {%- if page.url contains pg.slug %} current{%- endif -%}
+                {%- capture pgslug -%}/{{pg.slug}}{%- endcapture -%}
+                {%- if page.url contains pgslug %} current{%- endif -%}
             " href="
                 {%- capture urlslash -%}{{pg.url}}/{%-endcapture -%}
                 {%- if page.url == pg.url or page.url == urlslash -%}

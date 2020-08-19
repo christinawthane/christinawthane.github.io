@@ -12,9 +12,8 @@ signingtime:
 
 signandplay:
   title: Sign and Play
-  price:
-    first: 25
-    extras: "Coffee and snacks included"
+  price: 25
+  price_extras: "Coffee and snacks included"
 
 slingwalk:
   title: >-
@@ -60,3 +59,15 @@ slingwalk:
 
 notice:
   rsvp: false
+
+bringingbabyhome:
+  title: Bringing Baby home
+  rsvp: true
+  image: /images/events/bbh.jpg
+  location: hebammenpraxis
+  price: 470
+  price_extras: " (per couple) - Includes course materials!"
+  description: >-
+    The Bringing Baby Home workshop prepares couples for life with baby and helps
+    them be the best parenting team possible.
+  more: /bringingbabyhome

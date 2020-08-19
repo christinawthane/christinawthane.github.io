@@ -16,6 +16,10 @@
   en: Sign and Play
   de: Sign and Play
   url: /signandplay
+- slug: bringingbabyhome
+  en: Bringing Baby Home
+  de: Bringing Baby Home
+  url: /bringingbabyhome
 - slug: about
   en: About
   de: Über mich
@@ -28,4 +32,3 @@
   en: Contact
   de: Kontakt
   url: /contact
-
