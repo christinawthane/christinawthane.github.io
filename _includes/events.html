@@ -76,7 +76,7 @@ List of all events
                 {%- endif -%}
                 {{ event.price_extras | default: classdefaults.price_extras }}</p>
         {% endif -%}
-        {% capture more %}{{event.more | default classdefaults.more}}{% endcapture -%}
+        {% capture more %}{{event.more | default: classdefaults.more}}{% endcapture -%}
         <div class="event-description" markdown="1">{{ event.description | default: classdefaults.description }}
 {% if more != nil -%}{% unless page.url contains more -%}
 <a href="{{more}}" class="event-more">More Info...</a>
