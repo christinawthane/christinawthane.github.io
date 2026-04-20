@@ -1,3 +1,6 @@
+> [!CAUTION]
+> Please visit <https://www.lilybee.ch/> for the current LilyBee website. This repository is no longer used and has been archived.
+
 # LilyBee
 
 Source for http://lilybee.ch. The site is hosted on [github](https://github.com/christinawthane/christinawthane.github.io/). A beta site can be accessed at https://sbliven.github.io
